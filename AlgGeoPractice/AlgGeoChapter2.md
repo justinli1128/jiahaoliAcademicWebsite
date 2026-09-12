@@ -307,6 +307,57 @@ $\spec(k(s))\times\_{\spec(k)}\spec(k(t))=\spec(k(s)\otimes\_kk(t))$. This is no
 
 ### 2.3.13 Properties of Morphisms of Finite Type
 
+#### a)
+
+A closed immersion is a morphism of finite type. 
+
+_proof:_
+
+Let $f:Y \to X$ be closed, choose affine cover $\spec(A\_i)$ of $X$. Since closed immersion is stable under pullback, we have $f^{-1}(\spec(A\_i))$ is a closed immersion of $\spec(A\_i)$. Hence there is ideal $I$ of $A\_i$ such that $f^{-1}(\spec(A\_i))\cong \spec(A\_i/I)$. $A\_i/I$ is finitely generated $A\_i$-algebra. Hence $f$ is of finite type.
+
+#### b)
+
+A quasi-compact open immersion is of finite type.
+
+_proof:_
+
+We simply identify an open immersion with an open set $U$ of $X$ that is a scheme. Quasicompact implies for all open affine $\spec(A)$ of $X$, $U\cap \spec(A)$ are quasicompact.
+
+$U\cap \spec(A)$ is quasicompact implies that we just need to find an affine cover of , $U\cap \spec(A)$ so it is induced from a finitely generated $A$-algebra. We can cover $U$ by something of the form $D(f\_i)$ of $\spec(A)$, and $A\to A\_{f\_i}$ is finitely generated.
+
+#### c)
+
+A composition of two morphisms of finite type is of finite type. 
+
+_proof:_
+
+If $C$ is a finitely generated $B$-algebra, and $B$ is finitely generated $A$-algebra, then $C$ is $A$-finitely generated. Finiteness of cover is simple.
+
+#### d)
+
+Morphisms of finite type are stable under base extension. 
+
+_proof:_
+
+Let $f:Y\to X$ be finite, and $g:X'\to X$ be any map. For open affine $\spec(B)$ of $X'$, let $\spec(A\_i)$ be some affine cover of $g(\spec(B))$. It suffices to assume that $\spec(B)$ is contained entirely in one of $A$. We have that $f^{-1}(\spec(A))$ are covered by finitely many fin.gen. $A$-algebra $R$. The preimage of $\spec(B)$ in $Y\times_XX'$ then is covered by $R\otimes_{A} B$, which is $B$ fin.gen.
+
+#### e)
+
+If $X$ and $Y $ are schemes of finite type over $S$, then $ X \times\_S Y$ is of finite type over $S$.
+
+_proof:_
+
+For affine $\spec(A)$ in $S$, there are $\spec(B\_i)$ and $\spec(C\_j)$ in the $X$ and $Y$ resp. and the preimage in $X\times\_S Y$ is then $\spec(B\_i\otimes\_A C\_j)$. All are fin.gen. $A$-alg and there are finitely many of them.
+
+### 2.3.22* Dimension of the Fibres of a Morphism.
+
+Let $f:X\to Y$ be a dominant morphism (dense image) of integral schemes of finite type over a field $k$. 
+
+#### a)
+Let $Y'$ be a closed irreducible subset of Y, whose generic point $\eta$ is contained in $f(X)$. Let $Z$ be any irreducible component of $f^{-1}(Y')$ such that $\eta\in f(Z)$, show that
+\\[ \mathrm{codim}(Z,X)\leq \mathrm{codim}(Y',Y)\\]
+
+_proof:_
 
 ## 2.4: Separated and Proper Morphisms
 ## 2.5: Sheaves of Modules
