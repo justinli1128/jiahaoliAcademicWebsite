@@ -12,7 +12,19 @@
 window.MathJax = {
   tex: {
     inlineMath: [['$', '$']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    macros:{
+        F: " \\mathcal{F}",
+        G: " \\mathcal{G}",
+        Oc: " \\mathcal{O}",
+        colim: " \\mathrm{colim}",
+        Hom: "\\mathcal{H}om",
+        Sch: "\\mathcal{S}ch",
+        Ring: "\\mathcal{R}ing",
+        C: "\\mathbb{C}",
+        A: "\\mathbb{A}",
+        Proj: "\\mathbb{P}"
+        }
   },
   chtml: {
     scale: 1
