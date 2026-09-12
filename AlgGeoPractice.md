@@ -2,7 +2,7 @@
 layout: default
 title: Practices in _Algebraic Geometry_ by R. Hartshorne (updating)
 ---
-(Updating. v.2)
+(Updating. v.3)
 # Chapter 2: Schemes
 ## 2.1: Sheaves
 ### 2.1.1 
@@ -35,6 +35,10 @@ Let $X=\mathbb{C}$, let $\mathcal{F=O}$ be the space of holomorphic functions an
 We see that the stalks $\mathcal{O}\_P \to \mathcal{O}^{\*}\_P$ is surjective, as for every nonvanishing $g\in {\mathcal{O}^{\*}}\_P$, there is a small open disc $U$ such that $g(U)\subset Dom \ \ln$, the holomorphic domain of $\ln$. So this is surjective on stalk, hence surjective.
 
 However, on $U=\mathbb{C}-{0}$, $g(z)=z$ is nonvanishing yet $\ln (z)$ is not holomorphic. 
+
+### 2.1.15
+Let $\mathcal{F}$ and $\mathcal{G}$ be sheaves of abelian groups over $X$. For every $U\subseteq X$ show that the set $\Hom(\F|_U,\G|_U)$ of morphisms of the restricted sheaves has a natural structure of abelian group. Show that the presheaf $U\mapsto \Hom(\F|_U,\G|_U)$ is a sheaf. This is the Hom sheaf $\HomSh(\F, \G)$
+
 
 ## 2.2: Schemes
 ## 2.3: First Properties of Schemes
