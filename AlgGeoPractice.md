@@ -2,7 +2,7 @@
 layout: default
 title: Practices in _Algebraic Geometry_ by R. Hartshorne (updating)
 ---
-(Updating. v.3)
+(Updating. v.4)
 # Chapter 2: Schemes
 ## 2.1: Sheaves
 ### 2.1.1 
@@ -53,9 +53,57 @@ Since restriction and gluing commutes, this defines us a morphism of sheaf $\phi
 ### 2.1.21 Examples of Sheaves on Varieties
  Let $X$ be some variety over $k$ closed, $\Oc\_X$ is the sheaf of regular functions 
  
- #### a)
+#### a)
  
  Let $Y$ be a closed subset of $X$. For each open set $U \subseteq X$, let $I\_Y(U)$ be the ideal in the ring $\Oc\_X(U)$ consisting of those regular functions which vanish on $Y$. Show $I\_Y$ is a sheaf, the ideal sheaf
+
+_proof:_
+
+Suppose $f\|\_U\in I\_Y(U)$ and $f\|\_V\in I\_Y(V)$ that agrees on $U\cap V$, let $f\in \Oc\_X(U\cup V)$ be the glued section, since $f(Y\cap U)=0$ and $f(Y\cap V)=0$, then $f(Y\cap (U\cup V))=0$, so $f\in I\_Y(U\cup V)$. The uniqueness follows easily.
+
+#### b)
+
+If $Y$ is a subvariety, then the quotient sheaf $\Oc\_X/I\_Y$ is isomorphic to $i\_*\Oc\_Y$, where $i: Y\to X$ is the inclusion.
+
+_proof:_
+
+For $U\subseteq X$, $i\_{\*}\Oc\_Y(U)=\Oc\_Y(i^{-1}(U))=\Oc\_{Y}(Y\cap U)$. 
+
+There is map
+        \[
+            \varphi: \Oc\_X\to i\_{\*}\Oc\_Y
+        \] induced from precomposition of the inclusion, we see that $f\in \ker \varphi(U)$ iff $f$ vanishes on $Y\cap U$, so $f\in I\_Y$. Since kernels are determined on the opensets, we have $\varphi$ determines the isomorphism we claimed.
+
+#### c)
+
+Let $X=\Proj^1$ and let $Y=\{P,Q\}$ for $P\neq  Q\in X$. There is then $\F=i\_{\*}\Oc\_P\oplus i\_{\*}\Oc\_Q$ and 
+    \[
+        0\to I\_Y\to \Oc\_X\to \F\to 0
+    \] is exact. Show, however, the section map $\Gamma(X, \Oc\_X)\to\Gamma(X, \F)$ is not surjective. (Leaves room for derived functors)
+
+_proof:_
+
+$\Gamma(X, \Oc\_X)\cong k$, the constant functions. Yet $\Gamma(X, \F)\cong\Oc\_P\oplus \Oc\_Q$, clearly not surjective.
+    
+#### d)
+
+Let $X=\Proj^1$ and let $\G$ be the constant sheaf associated to the function field $K(X)$. Show that there is an injection $\Oc\_X\to \G$. Show that the quotient sheaf $\G/ \Oc\_X$ is isomorphic to the direct sum of sheaves $\bigoplus\_{P\in X}i\_P(I\_P)$ where $I\_P:=K(X)/\Oc\_P$ and $i\_P$ defines the skyscraper at $P$.  
+
+_proof:_
+
+Define $\varphi: \Oc\_X\to \G$ on $U$ to be 
+        \[
+            \varphi\|\_U: \Oc\_X(U)\to \G(U)
+            \\ f\mapsto const\_f
+    \] The constant function at $f$. This is obviously a sheaf morphism and injective. 
+
+There is also $\psi:\G\to \bigoplus\_{P\in X}i\_P(I\_P)$ defined on connected $U$ $\psi(U)$ as $f\in K(X)\mapsto \sum\_{P\in U} f \mod{\Oc\_P}$. This makes sense because $f\mod \Oc\_P=0$ iff $f\in \Oc\_P$ a regular function at $P$, so $f$ is nonzero on $I\_P$ iff it has a pole at $P$. But there are only finitely many poles to a rational function on $\Proj^1$, hence this makes sense.
+    On the stalk, this is $f\in K(X)\mapsto f\mod \Oc\_P$. So it is surjective. There is sequence 
+    \[ 0\to \Oc\_X\to \G\to \bigoplus\_{P\in X}i\_P(I\_P)\to 0\]
+
+The $\ker \psi\_P$ is the just $\Oc\_P$, so the sequence is exact on stalks. Hence the sequence is exact.
+
+#### d)
 
 ## 2.2: Schemes
 ## 2.3: First Properties of Schemes
