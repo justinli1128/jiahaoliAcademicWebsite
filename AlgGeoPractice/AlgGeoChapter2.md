@@ -349,6 +349,50 @@ _proof:_
 
 For affine $\spec(A)$ in $S$, there are $\spec(B\_i)$ and $\spec(C\_j)$ in the $X$ and $Y$ resp. and the preimage in $X\times\_S Y$ is then $\spec(B\_i\otimes\_A C\_j)$. All are fin.gen. $A$-alg and there are finitely many of them.
 
+### 2.3.20 Dimensions
+
+Let $X$ be an integral scheme of finite type over a field $k$ (not necessarily
+algebraically closed).
+
+#### a)
+
+For any closed point $P\in X$, $\dim(X)=\dim(\Oc\_{X,p})$ , where for rings, we always mean the Krull dimension.
+
+_proof:_
+
+
+#### b)
+
+Let $K(X)$ be the function field of $X$, then $\dim(X) =\mathrm{tr.d} K(X)/k$
+(transcendental degree over $k$)
+
+_proof:_
+
+
+#### c)
+
+If $Y$ is a closed subset of $X$, then $\mathrm{codim}(Y,X) = \inf\{\dim \Oc_{X,p}\| \ p \in Y\}$.
+
+_proof:_
+
+#### d)
+
+If $Y$ is a closed subset of $X$, then $\dim (Y) + \mathrm{codim}(Y,X) = \dim (X)$
+
+_proof:_
+
+#### e)
+
+If $U$ is a nonempty open subset of $X$, then $\dim (U) = \dim (X)$.
+
+_proof:_
+
+#### f)
+
+If $k\subseteq k'$ is a field extension, then every irreducible component of $X'= X \times\_k k'$ has dimension $= \dim X$.
+
+_proof:_
+
 ### 2.3.22* Dimension of the Fibres of a Morphism.
 
 Let $f:X\to Y$ be a dominant morphism (dense image) of integral schemes of finite type over a field $k$. 
@@ -358,6 +402,7 @@ Let $Y'$ be a closed irreducible subset of Y, whose generic point $\eta$ is cont
 \\[ \mathrm{codim}(Z,X)\leq \mathrm{codim}(Y',Y)\\]
 
 _proof:_
+
 
 ## 2.4: Separated and Proper Morphisms
 ## 2.5: Sheaves of Modules
