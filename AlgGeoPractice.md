@@ -39,6 +39,21 @@ However, on $U=\mathbb{C}-{0}$, $g(z)=z$ is nonvanishing yet $\ln (z)$ is not ho
 ### 2.1.15
 Let $\mathcal{F}$ and $\mathcal{G}$ be sheaves of abelian groups over $X$. For every $U\subseteq X$ show that the set $\Hom(\F|_U,\G|_U)$ of morphisms of the restricted sheaves has a natural structure of abelian group. Show that the presheaf $U\mapsto \Hom(\F|_U,\G|_U)$ is a sheaf. This is the Hom sheaf $\HomSh(\F, \G)$
 
+_proof:_
+
+For every $U \subseteq X$, define addition on $\psi, \phi\in\Hom(\F|_U,\G|_U)$ to be $(\psi+\phi)(V):=\psi(V)+\phi(V)$. Since the restriction maps are abelian group morphism, this is well defined. 
+
+Given $U$ and $V$ open, and $\phi\|\_U\in \Hom(\F\|\_U,\G\|\_U)$ and $\phi\|\_V\in \Hom(\F\|\_V,\G\|\_V)$, such that $\phi\|\_{U}\|\_V=\phi\|\_V\|\_U$. We define $\phi\in \Hom(\F\|\_{U\cup V},\G\|\_{U\cup V})$ to be for $W\subseteq U\cup V$ as following
+        $$\phi(W): \F(W)\to \G(W)\\ a\mapsto \phi\|\_{U\cap W}(a) \cup \phi\|\_{V\cap W}(a)$$
+        
+Here $\phi\|\_{U\cap W}(a) \cup \phi\|\_{V\cap W}(a)$ is the section glued from $\phi\|\_{U\cap W}(a)\in \G(U\cap W)$ and $\phi\|\_{V\cap W}(a)\in \G(V\cap W)$, which is doable because $\phi\|\_U\|\_V=\phi\|\_V\|\_U$.
+
+Since restriction and gluing commutes, this defines us a morphism of sheaf $\phi: \F(U\cup V)\to \G(U\cup V)$. It is easy to see that the gluing of patches of morphism gives the original morphism.
+    
+### 2.1.21 Examples of Sheaves on Varieties
+ Let $X$ be some variety over $k$ closed, $\Oc\_X$ is the sheaf of regular functions 
+ #### a)
+ Let $Y$ be a closed subset of $X$. For each open set $U \subseteq X$, let $I\_Y(U)$ be the ideal in the ring $\Oc\_X(U)$ consisting of those regular functions which vanish on $Y$. Show $I\_Y$ is a sheaf, the ideal sheaf
 
 ## 2.2: Schemes
 ## 2.3: First Properties of Schemes
