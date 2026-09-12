@@ -2,7 +2,7 @@
 layout: default
 title: Practices in Chapter 2 of _Algebraic Geometry_ by R. Hartshorne (updating)
 ---
-(Updating. v.4)
+(v.1.1.4)
 
 [Chapter 2: Schemes](#Chapter 2: Schemes)
 
