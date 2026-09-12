@@ -6,7 +6,7 @@ title: Practices in _Algebraic Geometry_ by R. Hartshorne (updating)
 # Chapter 2: Schemes
 ## 2.1: Sheaves
 ### 2.1.1 
-Let $A$ be an abelian group, and define the constant presheaf associated to $A$ on the topological space $X$ to be the presheaf $U \mapsto  A$ for all $U \neq \emptyset$, with restriction maps the identity. Show that the constant sheaf $\mathcal{A}$ defined in the text is the sheaf associated to this presheaf.
+Let $$A$$ be an abelian group, and define the constant presheaf associated to \(A\) on the topological space \[X\] to be the presheaf $U \mapsto  A$ for all $U \neq \emptyset$, with restriction maps the identity. Show that the constant sheaf $\mathcal{A}$ defined in the text is the sheaf associated to this presheaf.
 
 _proof:_ 
 
