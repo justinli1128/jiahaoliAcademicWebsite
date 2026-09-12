@@ -1,0 +1,8 @@
+title: My Mathematics Notes
+description: Notes on mathematics
+
+theme: minima
+
+markdown: kramdown
+
+permalink: /:title/
