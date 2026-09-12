@@ -3,6 +3,11 @@ layout: default
 title: Practices in _Algebraic Geometry_ by R. Hartshorne (updating)
 ---
 (Updating. v.4)
+[Chapter 2: Schemes](# Chapter 2: Schemes)
+[2.1: Sheaves](# 2.1 Sheaves)
+[2.2: Schemes](# 2.2 Schemes)
+[2.3: First Properties of Schemes](# 2.3: First Properties of Schemes) 
+
 # Chapter 2: Schemes
 ## 2.1: Sheaves
 ### 2.1.1 
