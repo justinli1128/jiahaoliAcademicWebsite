@@ -1,12 +1,29 @@
 ---
 layout: default
-title: Practices in _Algebraic Geometry_ by R. Hartshorne (updating)
+title: Practices in Chapter 2 of _Algebraic Geometry_ by R. Hartshorne (updating)
 ---
 (Updating. v.4)
-[Chapter 2: Schemes](# Chapter 2: Schemes)
-[2.1: Sheaves](# 2.1 Sheaves)
-[2.2: Schemes](# 2.2 Schemes)
-[2.3: First Properties of Schemes](# 2.3: First Properties of Schemes) 
+
+[Chapter 2: Schemes](#Chapter 2: Schemes)
+
+[2.1: Sheaves](#2.1 Sheaves)
+
+[2.2: Schemes](#2.2 Schemes)
+
+[2.3: First Properties of Schemes](#2.3: First Properties of Schemes) 
+
+[2.4: Separated and Proper Morphisms](#2.4: Separated and Proper Morphisms)
+
+[2.5: Sheaves of Modules](#2.5: Sheaves of Modules)
+
+[2.6: Divisors](#2.6: Divisors)
+
+[2.7: Projective Morphisms](#2.7: Projective Morphisms)
+
+[2.8: Differentials](#2.8: Differentials)
+
+[2.9: Formal Schemes](#2.9: Formal Schemes)
+
 
 # Chapter 2: Schemes
 ## 2.1: Sheaves
@@ -113,13 +130,185 @@ The $\ker \psi\_P$ is the just $\Oc\_P$, so the sequence is exact on stalks. Hen
 ### 2.2.1
 Let $A$ be a ring, let $X = \spec A$, let $f \in A$ and let$ D(f) \subseteq  X$ be the open complement of $V( (f))$. Show that the locally ringed space$ (D(f), \Oc\_X\|\_{D(f)}) $ is isomorphic to $\spec (A)\_{(f)}$ .
 
+_proof:_
+
+First $D(f)$ is the set of prime ideals not containing $(f)$. 
+
+There is inclusion of algebra $i:A\to A\_f$. We have for $p\in \spec (A\_f)$, $i^{-1}(p)$ is prime, and it does not contain $f$, since $f$ is an unit in $A\_f$. So we have a continuous map 
+    \\[
+       i:\spec A\_f\to D(f)
+    \\]
+
+We can also define inverse map that takes $p\mapsto pA\_f$, since $A\_f/pA\_f\cong A/p$ so this is prime. And continuous since if we have $g/f^n\in A\_f$ and $V(g/f^n)\subseteq \spec (A\_f)$ is closed, then the preimage would be $V(g)$.
+
+Not hard to see that $\spec(A\_f)\cong D(f)$ under the maps we defined. There is then morphism
+    \\[
+        \varphi:\Oc\_{X}\|\_{D(f)}\to i\_{\*}\Oc\_{\spec(A\_f)}
+    \\] And it is isomorphic on the stalk.
+
+### 2.2.2
+Let $(X,\Oc\_X)$ be a scheme, and let $U \subseteq X $be any open subset. Show that $(U, \Oc\_X\|\_U)$ is a scheme. We call this the induced scheme structure on the open set $U$, and we refer to $(U, \Oc\_X\|\_U)$ as an open subscheme of $X$.
+
+_proof:_
+
+Suppose we have $p \in U \subseteq X$, there is an affine open $\spec(A)$ containing $p$ in $X$. Choose $f\in A$ so that $x\in D(f)\subseteq U\cap \spec(A)$, which always exist since $U\cap \spec(A)$ is open in $\spec(A)$. Therefore, we have an affine neighbourhood of $p$ in $U$, that is $D(f)$. Do 
+this with all $p\in U$.
+
+### 2.2.3 Reduced Schemes
+$(X, \Oc\_X)$ is reduced if for every $U\subseteq X$, $\Oc\_X(U)$ has no nilpotents. 
+
+#### a)
+
+Show that this is equivalent to every stalk has no nilpotents
+
+_proof:_
+
+$\implies$ Let $a\in \Oc\_{X,p}$, we know $a=\[f, U\]$ for some $U$ and some $f\in \Oc\_X(U)$ and $(g,V)\in \[f,U\]$ iff $g\|\_{U\cap V}=f\|\_{U\cap V}$. 
+
+Suppose $a$ is nilpotent, there is $a^n=0$ for some $n$. So $f^n|\_{U\cap V}=0$ for some neighbourhood $V$ of $x$. $U\cap V$ is open, so $f$ cant be nilpotent, a contradiction.
+
+$\impliedby$ Let $f\in \Oc\_X(U)$, we know that $f^n\|\_p=(f\|\_p)^n$, since $(f\|\_p)^n\neq0$, $f^n\neq 0$.
+
+#### b)
+
+For scheme $(X,\Oc\_X)$ define $X\_{red}:=(X, \Oc\_X^{red})$ to be the locally ring spaced where $\Oc\_X^{red}(U)$ is the reduction of $\Oc\_X(U)$ (quotient of ideal of nilpotnets). Show that $X\_{red}$ is a scheme and there is a morphism $i:X\_{red}\to X$ that is a homeomorphism on the topological space.
+
+_proof:_
+
+We show first $\spec(B)\_{red}\cong\spec(B^{red})$.
+
+There is a map $\psi:\spec(B^{red})\to \spec(B)$ from the quotient $q:B\to B^{red}$. Since $0\in p$ for every $p\in \spec(B)$, nilpotents $I\subseteq p$ for every $p$. So the map is a bijection. It is continuous because if we have closed set $V(f)\subseteq \spec(B^{red})$. We have then $\psi(V(f))$ is the set of $q^{-1}(p)$ for $f\in p$. As it turns out, $\psi(V(f))=V(f+I)$, since if $f+I\subseteq p'$, then $f\in q(p)$, and $q^{-1}q(p)=p$.
+
+Since the localization alway from some set commute with quotient, we see that $\spec(B^{red})\cong \spec(B)\_{red}$.
+
+The rest is then trivial, finding a cover $\spec(A\_i)$ of $X$, we can easily show that $\spec(A\_i^{red})$ covers $X_{red}$
+
+#### c)
+Shows that $f:X\to Y$ for $X$ reduced factors uniquely through $Y\_{red}\to Y$
+
+_proof:_
+
+The underlying continuous map is easily determined uniquely.
+
+The map $\varphi: \Oc\_Y\to f\_{\*}\Oc\_X$, is a sheaf map over $Y$. We know that ring maps takes nilpotents to nilpotents, so $\varphi$ factors through $\Oc\_Y^{red}=i\_{\*}\Oc\_{Y\_{red}}$ uniquely.
+
+### 2.2.4 Adjunction of $\spec(-):\Ring^{op}\to \Sch: \Gamma$
+
+For $f:X\to \spec(A)$, there is $f^{\sharp}: \Oc\_{\spec(A)}\to f\_{\*}\Oc\_X$, taking the top section we have 
+\\[
+    \alpha: \Hom\_{\Sch}(X,\spec(A))\to \Hom\_{\Ring}(A, \Gamma(X, \Oc\_X))
+\\] Show that this is an isomorphism.
+
+_proof:_
+
+We start by construction a function $\beta$ of the other direction.
+
+For a map $f^{\sharp}: A\to \Gamma(X, \Oc\_X)$, for every $p\in X$, there is a map 
+    \\[ f^{\sharp}\_p: A\to \Gamma(X, \Oc\_X)\to \Oc\_{X,p}/m\_{p}\\], 
+
+here $m\_{p}$ is the maximal ideal of $\Oc\_{X,p}$
+
+The kernel of this map is prime, since the codomain is a field. So we have a function $g:X\to \spec(A)$ that takes $p$ to $\ker f^{\sharp}\_p$. Is it continuous?
+
+For $r\in A$, $D(r)$ is the set of prime ideals not containing $r$, $g(p)\in D(r)$, if $\ker f^{\sharp}\_p$ not contains $r$. So $f^{\sharp}\_p(f)\notin m\_p$. Since $X$ is a scheme, $p$ is contained in some affine open $\spec(A)$, $f^{\sharp}\_p(r)\notin m\_p$ is equivalent to $f^{\sharp}(r)\mod p\neq 0$, or $f^{\sharp} (r)\notin p$ over $\spec(A)$. Internal to $\spec(A)$, we have $g^{-1}(D(r))\cap\spec(A)=D\_{\spec(A)}(f^{\sharp}(r))$. So we have that $g$ is continuous. We see that $g^{-1}(D(r))$ is the nonvanishing open set of $f^{\sharp}(r)$ in $X$ (make sense if we think $f^{\sharp}$ as precomposition.)
+
+We define $g^{\sharp}: \Oc\_{\spec(A)}\to g\_{\*}\Oc\_X$ that takes $r'/r^n\in A\_{r}$ to $f^{\sharp}(r')/f^{\sharp}(r)^n\in\Oc\_X(U)$, here $U$ is the nonvanishing open set of $f^{\sharp}(r)$ so it makes sense. We denote the construction $\beta(f^{\sharp})$.
+
+Obviously $\alpha\circ \beta=id$. We show that this is true in the other direction.
+
+Assume for now $X=\spec(B)$.  A map $f: \spec(B) \to \spec(A)$, is induced by its top section $f^{\sharp}:A\to B$, from $(f^{\sharp})^{-1}$ on the primes ideals. This is equivalent to the kernel of the map 
+    \begin{align*}
+        A\to B\to B\_{(p)}\to B\_{(p)}/m\_p
+    \end{align*} As preimage of $m_p$ in $B$ is $p$.
+
+So for affine case, the continuous map we constructed agrees. Now for a general scheme $X$, there is an affine cover $\spec(A\_i)$. Since stalk is determined locally, we easily deduce that the continuous map $\beta\circ \alpha(f)$ agrees with that of $f$.
+
+The case of sheaf map can also be deduced from the affine case.
+
+For $f:\spec(B)\to \spec(A)$ associated to ring map $\varphi:A\to B$, $f^{\sharp}: \Oc\_\spec(A)\to f\_{\*}\Oc\_{\spec(B)}$ on standard opens $D(r)$ of $\spec(A)$ is just 
+
+\\[ A\_r \to B_{\varphi(r)}\\]
+
+Where $r'/r^n$ are map to $\varphi(r')/\varphi(r)^n$, the map we have constructed. 
+
+The general scheme case follows.
+
+### 2.2.9
+
+If $X$ is a topological space, and $Z $ an irreducible closed subset of $X$, a generic point for $Z$ is a point $\xi$ such that $Z=\overline{ \{\xi\}}$. If $X$ is a scheme, show that every (nonempty) irreducible closed subset has a unique generic point. 
+
+_proof:_
+
+First of all, schemes are $T_0$. It suffices to show this for affines. For $p\neq q\in \spec(A)$, there is $f\in p$ and not in $q$. So $q\in D(f)$ and $p\notin D(f)$.
+
+Let $\spec(A)$ be an affine open of $Z$. There is an ideal $I=\sqrt 0$ such that $V(I)=\spec(A)$. Since $\spec(A)$ is irreducible, $I$ is prime, since for $f, g\in A$ such that $fg\in I$, we have 
+\\[ V(I)\subseteq V(fg)=V(f)\cup V(g)\\]
+So $f\in I$ or $g\in I$. 
+
+Therefore, $I$ is a generic point of $\spec(A)$. Since $Z$ is irreducible and $\spec(A)$ is open in $Z$, so $I$ is then a generic point of $Z$.
+
+If there are two generic point $\xi$ and $\xi'$, we have $\xi\in \overline{\{\xi'\}}$ and $\xi'\in \overline{\{\xi\}}$. So any open neighbourhood of one contains the other. Since schemes are $T_0$, this implies $\xi=\xi'$.
+
+### 2.2.17 Criterion for Affineness
+
+#### a)
+
+Let$ f: X\to Y$ be a morphism of schemes, and suppose that $Y$ can be covered by open subsets $U\_i$ such that for each $i$, the induced map $f^{-1}(U\_i)\to U\_i$ isomorphism. Then $f$ is an isomorphism. 
+
+_proof:_
+
+We have that $f$ is a homeomorphism on the underlying space. Since $f\_i^{\sharp}: \Oc\_Y\|\_{U\_i}\to f\_{\*}\Oc\_X\|\_{f^{-1}U\_i}$ is an isomorphism of sheaves and we have that any open sets $V$ in $Y$ are unions of opens of $U\_i$ similarly $f^{-1}(V)$ would be the union of those opens of $f^{-1}(U\_i)$. The gluing property tells us that the overall sheaves are isomorphic.
+
+#### b)
+
+A scheme $X$ is affine if and only if there is a finite set of elements $f\_i \in \Gamma(X, \Oc\_X)$ such that the open subsets $X\_{f\_i}$ are affine and $f\_i$ generate $1\in A$.
+
+_proof:_
+
+($\implies$) If $X$ is affine, since $X$ is quasicompact, then there are finite $f_i$ that generate $i$, and $X_{f_i}=D(f_i)$.
+
+($\impliedby$) Denote $A=\Gamma(X,\Oc\_X)$, we want to show $X\cong \spec(A)$. There is a map $\varphi: X\to \spec(A)$ that is induced from the identity in $\beta:\Hom\_{\Ring}(A,\Gamma(X,\Oc\_X))\to \Hom\_{\Sch}(X, \spec(A))$.
+
+We first show that $X\_{f\_i}\cong D(f\_i)$, which is natural as $X\_{f\_i}$ are affine, so top section $\Gamma(X\_{f\_i}, \Oc\_{X\_{f\_i}})\cong A\_{f\_i}$ determines $X\_{f\_i}$ entirely. 
+
+Since $f\_i$ generate $1$, then $D(f\_i)$ covers $A\_{f\_i}$, and $\varphi^{-1}(D(f\_i))=X\_{f\_i}\to D(f\_i)$ are isomorphisms. By the previous exercise, we have $X\cong \spec(A)$.
+
 ## 2.3: First Properties of Schemes
+
+### 2.3.6
+
+Let $X$ be an integral scheme. Show that the local ring $\Oc\_{\xi}$ of the generic point $\xi$ of $X$ is a field. It is called the function field of $X$ and is denoted by $K(X)$. Show also that if $U = \spec (A)$ is any open affine subset of $X$, then $K(X) $is isomorphic to the quotient field of $A$. 
+
+_proof:_
+
+If $X$ is an integral scheme, take an affine cover $\spec(A\_i)$ of $X$. Since for every open $U$, $\Oc\_X(U)$ is integral domain, $A\_i$ are integral domain. The unique generic point of $X$ is the generic point $(0)$ of $\spec(A\_i)$. Since stalk are locally determined, we have $\Oc\_{X,(0)}=Q(A\_i)$. Here $Q(A\_i)$ is the quotient field of $A\_i$ for some $i$.    
+
+### 2.3.9 Product of Schemes
+
+#### a)
+
+Let $k$ be a field, $\A^1\_k:=\spec(k\[x\])$, show that $\A^1\_k\times\_{\spec(k)}\A^1\_k\cong \A^2\_k$ and show that the underlying point set of the product is not the product of the underlying point sets of the factors (even if $k$ is algebraically closed). 
+
+_proof:_
+
+First of all, $\A^1\_k\times\_{\spec(k)}\A^1\_k\cong \spec(k\[x\]\otimes\_kk\[y\])\cong \spec(k\[x,y\])=\A^2\_k$.
+
+Since we claim that for even closed $k$, this is not the product set. So let $k=\mathbb{C}$. There are points $\{p \in \mathbb{C}\}$ and generic point $\xi$ for the underlying set of $\A^1\_k$. The product is $(p,q)\in \C^2$, $(\xi, q)$, $(p,\xi)$, and $(\xi,\xi)$. But $\A^2\_k$ has $(p,q)$ and only one generic point $\eta$.
+
+#### b)
+
+Describe $\spec(k(s))\times\_{\spec(k)}\spec(k(t))$.
+
+_description:_
+
+$\spec(k(s))\times\_{\spec(k)}\spec(k(t))=\spec(k(s)\otimes\_kk(t))$. This is not a field, since $s\otimes 1-1\otimes t$ is not invertible. It is in general not a one point space. It is a integral scheme.
+
+### 2.3.13 Properties of Morphisms of Finite Type
+
+
 ## 2.4: Separated and Proper Morphisms
 ## 2.5: Sheaves of Modules
 ## 2.6: Divisors
 ## 2.7: Projective Morphisms
 ## 2.8: Differentials
 ## 2.9: Formal Schemes
-
-# Chapter 3: Cohomology
-
