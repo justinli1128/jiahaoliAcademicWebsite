@@ -12,7 +12,7 @@ _proof:_
 
 There exists $\phi: const_A\to \mathcal{A}$, by defining $a\in A\mapsto (f:U\to A, u\mapsto a)$ the constant map at $a$. We want to show that this is an isomorphism on the stalk for every $p\in X$.
 
-   We know that for every $x\in U$, there is a connected $x\in V\subseteq U$, therefore, the restriction of the colimit $\mathrm{colim}_{p\in U}F\cong \mathrm{colim}_{p\in V}F$ for all connected $V$. Apply this to $\phi$, we have that this is the identity on $A$, which is the stalk for both sheaf and presheaf.
+   We know that for every $x\in U$, there is a connected $x\in V\subseteq U$, therefore, the restriction of the colimit $\mathrm{colim}\_{p\in U}F\cong \mathrm{colim}\_{p\in V}F$ for all connected $V$. Apply this to $\phi$, we have that this is the identity on $A$, which is the stalk for both sheaf and presheaf.
 
 ### 2.1.3
 #### a)
@@ -22,7 +22,7 @@ _proof:_
     
 ($\impliedby$) This shows that $\varphi$ is surjective on the stalk, so $\varphi$ is surjective.
 
-($\implies$) we have that $\varphi$ is surjective on the stalk. Let $s\in \mathcal{G}(U)$, then for every $P \in U$, $s|_P\in \mathcal{G}_P$ has preimages $t|\P\in \mathcal{F}_P$. There is then an open set $U_i \subseteq U$ such that $\varphi(t|_{U_i})=s|_{U_i}$. Do this with all $P$.
+($\implies$) we have that $\varphi$ is surjective on the stalk. Let $s\in \mathcal{G}(U)$, then for every $P \in U$, $s|\_P\in \mathcal{G}\_P$ has preimages $t|\_P\in \mathcal{F}\_P$. There is then an open set $U_i \subseteq U$ such that $\varphi(t|\_{U_i})=s|\_{U_i}$. Do this with all $P$.
 
 #### b)
 
@@ -30,9 +30,9 @@ _proof:_
 
  _example:_
 
-Let $X=\mathbb{C}$, let $\mathcal{F=O}$ be the space of holomorphic functions and let $\mathcal{G=O}^*$ be the space of nonvanishing holomorphic functions, $\varphi(f)=\exp(f)$. 
+Let $X=\mathbb{C}$, let $\mathcal{F=O}$ be the space of holomorphic functions and let $\mathcal{G=O}^{\*}$ be the space of nonvanishing holomorphic functions, $\varphi(f)=\exp(f)$. 
 
-We see that the stalks $\mathcal{O}_P \to \mathcal{O}^*_P$ is surjective, as for every nonvanishing $g\in {\mathcal{O}^*}_P$, there is a small open disc $U$ such that $g(U)\subset Dom \ \ln$, the holomorphic domain of $\ln$. So this is surjective on stalk, hence surjective.
+We see that the stalks $\mathcal{O}\_P \to \mathcal{O}^{\*}\_P$ is surjective, as for every nonvanishing $g\in {\mathcal{O}^{\*}}\_P$, there is a small open disc $U$ such that $g(U)\subset Dom \ \ln$, the holomorphic domain of $\ln$. So this is surjective on stalk, hence surjective.
 
 However, on $U=\mathbb{C}-{0}$, $g(z)=z$ is nonvanishing yet $\ln (z)$ is not holomorphic. 
 
