@@ -1,4 +1,16 @@
-# Tests
+---
+layout: default
+title: Algebraic Geometry Practices
+---
 
-Testing if we can write math equation like $a^2+b^2=c^2$ or $f:X\to Y$, or maybe even
-$(X,\mathcal{O}_X)$. Updates
+# Algebraic Geometry Practices
+
+Your notes here...
+
+Let \(A\) be a ring. Then
+
+$$
+\operatorname{Spec}(A)
+=
+\{\mathfrak p\subseteq A:\mathfrak p\text{ is prime}\}.
+$$
