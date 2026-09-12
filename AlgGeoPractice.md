@@ -70,16 +70,16 @@ _proof:_
 For $U\subseteq X$, $i\_{\*}\Oc\_Y(U)=\Oc\_Y(i^{-1}(U))=\Oc\_{Y}(Y\cap U)$. 
 
 There is map
-        \[
+        \\[
             \varphi: \Oc\_X\to i\_{\*}\Oc\_Y
-        \] induced from precomposition of the inclusion, we see that $f\in \ker \varphi(U)$ iff $f$ vanishes on $Y\cap U$, so $f\in I\_Y$. Since kernels are determined on the opensets, we have $\varphi$ determines the isomorphism we claimed.
+        \\] induced from precomposition of the inclusion, we see that $f\in \ker \varphi(U)$ iff $f$ vanishes on $Y\cap U$, so $f\in I\_Y$. Since kernels are determined on the opensets, we have $\varphi$ determines the isomorphism we claimed.
 
 #### c)
 
 Let $X=\Proj^1$ and let $Y=\{P,Q\}$ for $P\neq  Q\in X$. There is then $\F=i\_{\*}\Oc\_P\oplus i\_{\*}\Oc\_Q$ and 
-    \[
+    \\[
         0\to I\_Y\to \Oc\_X\to \F\to 0
-    \] is exact. Show, however, the section map $\Gamma(X, \Oc\_X)\to\Gamma(X, \F)$ is not surjective. (Leaves room for derived functors)
+    \\] is exact. Show, however, the section map $\Gamma(X, \Oc\_X)\to\Gamma(X, \F)$ is not surjective. (Leaves room for derived functors)
 
 _proof:_
 
@@ -92,18 +92,17 @@ Let $X=\Proj^1$ and let $\G$ be the constant sheaf associated to the function fi
 _proof:_
 
 Define $\varphi: \Oc\_X\to \G$ on $U$ to be 
-        \[
+        \\[
             \varphi\|\_U: \Oc\_X(U)\to \G(U)
             \\ f\mapsto const\_f
-    \] The constant function at $f$. This is obviously a sheaf morphism and injective. 
+    \\] The constant function at $f$. This is obviously a sheaf morphism and injective. 
 
 There is also $\psi:\G\to \bigoplus\_{P\in X}i\_P(I\_P)$ defined on connected $U$ $\psi(U)$ as $f\in K(X)\mapsto \sum\_{P\in U} f \mod{\Oc\_P}$. This makes sense because $f\mod \Oc\_P=0$ iff $f\in \Oc\_P$ a regular function at $P$, so $f$ is nonzero on $I\_P$ iff it has a pole at $P$. But there are only finitely many poles to a rational function on $\Proj^1$, hence this makes sense.
     On the stalk, this is $f\in K(X)\mapsto f\mod \Oc\_P$. So it is surjective. There is sequence 
-    \[ 0\to \Oc\_X\to \G\to \bigoplus\_{P\in X}i\_P(I\_P)\to 0\]
+    \\[ 0\to \Oc\_X\to \G\to \bigoplus\_{P\in X}i\_P(I\_P)\to 0\\]
 
 The $\ker \psi\_P$ is the just $\Oc\_P$, so the sequence is exact on stalks. Hence the sequence is exact.
 
-#### d)
 
 ## 2.2: Schemes
 ## 2.3: First Properties of Schemes
