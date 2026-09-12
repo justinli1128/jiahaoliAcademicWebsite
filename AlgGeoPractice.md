@@ -167,7 +167,7 @@ _proof:_
 
 $\implies$ Let $a\in \Oc\_{X,p}$, we know $a=\[f, U\]$ for some $U$ and some $f\in \Oc\_X(U)$ and $(g,V)\in \[f,U\]$ iff $g\|\_{U\cap V}=f\|\_{U\cap V}$. 
 
-Suppose $a$ is nilpotent, there is $a^n=0$ for some $n$. So $f^n|\_{U\cap V}=0$ for some neighbourhood $V$ of $x$. $U\cap V$ is open, so $f$ cant be nilpotent, a contradiction.
+Suppose $a$ is nilpotent, there is $a^n=0$ for some $n$. So $f^n\|\_{U\cap V}=0$ for some neighbourhood $V$ of $x$. $U\cap V$ is open, so $f$ cant be nilpotent, a contradiction.
 
 $\impliedby$ Let $f\in \Oc\_X(U)$, we know that $f^n\|\_p=(f\|\_p)^n$, since $(f\|\_p)^n\neq0$, $f^n\neq 0$.
 
