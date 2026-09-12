@@ -3,6 +3,7 @@ layout: default
 title: Practices in of _Algebraic Geometry_ by R. Hartshorne (updating)
 ---
 (v.1.1)
+
 [Chapter 2: Schemes](#jiahaoliAcademicWebsite/AlgGeoPractice/) 
 (In Progress)
 
