@@ -22,11 +22,11 @@ _proof:_
     
 ($\impliedby$) This shows that $\varphi$ is surjective on the stalk, so $\varphi$ is surjective.
 
-($\implies$) we have that $\varphi$ is surjective on the stalk. Let $s\in \mathcal{G}(U)$, then for every $P \in U$, $s|\_P\in \mathcal{G}\_P$ has preimages $t|\_P\in \mathcal{F}\_P$. There is then an open set $U\_i \subseteq U$ such that $\varphi(t|\_{U\_i})=s|\_{U\_i}$. Do this with all $P$.
+($\implies$) we have that $\varphi$ is surjective on the stalk. Let $s\in \mathcal{G}(U)$, then for every $P \in U$, $s\|\_P\in \mathcal{G}\_P$ has preimages $t\|\_P\in \mathcal{F}\_P$. There is then an open set $U\_i \subseteq U$ such that $\varphi(t\|\_{U\_i})=s\|\_{U\_i}$. Do this with all $P$.
 
 #### b)
 
- Give an example of a surjective morphism of sheaves $\varphi: \mathcal{F}\to \mathcal{G}$ and an open set $U$ such that $\varphi|\_U: \mathcal{F}(U)\to \mathcal{G}(U)$ is not surjective.
+ Give an example of a surjective morphism of sheaves $\varphi: \mathcal{F}\to \mathcal{G}$ and an open set $U$ such that $\varphi\|\_U: \mathcal{F}(U)\to \mathcal{G}(U)$ is not surjective.
 
  _example:_
 
