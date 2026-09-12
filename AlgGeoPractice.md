@@ -2,7 +2,7 @@
 layout: default
 title: Practices in _Algebraic Geometry_ by R. Hartshorne (updating)
 ---
-
+(Updating. v.1)
 # Chapter 2: Schemes
 ## 2.1: Sheaves
 ### 2.1.1 
@@ -16,17 +16,17 @@ There exists $\phi: const_A\to \mathcal{A}$, by defining $a\in A\mapsto (f:U\to 
 
 ### 2.1.3
 #### a)
-   Show that $\varphi: \mathcal{F}\to \mathcal{G}$ is surjective iff the following holds: for every open set $U \subseteq  X$, and for every $s\in \mathcal{G}(U)$, there is a covering $\{U_i\}$ of $U$, and there are elements $t_i \in \mathcal{F}(U_i)$, such that $\varphi(t_i)=s|_{U_i}$.
+   Show that $\varphi: \mathcal{F}\to \mathcal{G}$ is surjective iff the following holds: for every open set $U \subseteq  X$, and for every $s\in \mathcal{G}(U)$, there is a covering $\{U\_i\}$ of $U$, and there are elements $t\_i \in \mathcal{F}(U\_i)$, such that $\varphi(t\_i)=s|\_{U\_i}$.
    
 _proof:_
     
 ($\impliedby$) This shows that $\varphi$ is surjective on the stalk, so $\varphi$ is surjective.
 
-($\implies$) we have that $\varphi$ is surjective on the stalk. Let $s\in \mathcal{G}(U)$, then for every $P \in U$, $s|\_P\in \mathcal{G}\_P$ has preimages $t|\_P\in \mathcal{F}\_P$. There is then an open set $U_i \subseteq U$ such that $\varphi(t|\_{U_i})=s|\_{U_i}$. Do this with all $P$.
+($\implies$) we have that $\varphi$ is surjective on the stalk. Let $s\in \mathcal{G}(U)$, then for every $P \in U$, $s|\_P\in \mathcal{G}\_P$ has preimages $t|\_P\in \mathcal{F}\_P$. There is then an open set $U\_i \subseteq U$ such that $\varphi(t|\_{U\_i})=s|\_{U\_i}$. Do this with all $P$.
 
 #### b)
 
- Give an example of a surjective morphism of sheaves $\varphi: \mathcal{F}\to \mathcal{G}$ and an open set $U$ such that $\varphi|_U: \mathcal{F}(U)\to \mathcal{G}(U)$ is not surjective.
+ Give an example of a surjective morphism of sheaves $\varphi: \mathcal{F}\to \mathcal{G}$ and an open set $U$ such that $\varphi|\_U: \mathcal{F}(U)\to \mathcal{G}(U)$ is not surjective.
 
  _example:_
 
