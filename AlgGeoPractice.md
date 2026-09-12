@@ -110,6 +110,9 @@ The $\ker \psi\_P$ is the just $\Oc\_P$, so the sequence is exact on stalks. Hen
 
 
 ## 2.2: Schemes
+### 2.2.1
+Let $A$ be a ring, let $X = \spec A$, let $f \in A$ and let$ D(f) \subseteq  X$ be the open complement of $V( (f))$. Show that the locally ringed space$ (D(f), \Oc\_X\|\_{D(f)}) $ is isomorphic to $\spec (A)\_{(f)}$ .
+
 ## 2.3: First Properties of Schemes
 ## 2.4: Separated and Proper Morphisms
 ## 2.5: Sheaves of Modules
