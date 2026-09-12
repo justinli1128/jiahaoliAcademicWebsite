@@ -6,23 +6,25 @@ title: Practices in Chapter 2 of _Algebraic Geometry_ by R. Hartshorne (updating
 
 [Chapter 2: Schemes](#Chapter 2: Schemes)
 
-[2.1: Sheaves](#2.1 Sheaves)
+[2.1: Sheaves](https://github.com/justinli1128/jiahaoliAcademicWebsite/blob/main/AlgGeoPractice.md#21-sheaves)
 
-[2.2: Schemes](#2.2 Schemes)
 
-[2.3: First Properties of Schemes](#2.3: First Properties of Schemes) 
+[2.2: Schemes](https://github.com/justinli1128/jiahaoliAcademicWebsite/edit/main/AlgGeoPractice.md#22-schemes)
 
-[2.4: Separated and Proper Morphisms](#2.4: Separated and Proper Morphisms)
+[2.3: First Properties of Schemes](https://github.com/justinli1128/jiahaoliAcademicWebsite/edit/main/AlgGeoPractice.md#23-first-properties-of-schemes)
 
-[2.5: Sheaves of Modules](#2.5: Sheaves of Modules)
+[2.4: Separated and Proper Morphisms](https://github.com/justinli1128/jiahaoliAcademicWebsite/edit/main/AlgGeoPractice.md#24-separated-and-proper-morphisms)
 
-[2.6: Divisors](#2.6: Divisors)
+[2.5: Sheaves of Modules](https://github.com/justinli1128/jiahaoliAcademicWebsite/edit/main/AlgGeoPractice.md#25-sheaves-of-Modules)
 
-[2.7: Projective Morphisms](#2.7: Projective Morphisms)
 
-[2.8: Differentials](#2.8: Differentials)
+[2.6: Divisors](https://github.com/justinli1128/jiahaoliAcademicWebsite/edit/main/AlgGeoPractice.md#26-divisors)
 
-[2.9: Formal Schemes](#2.9: Formal Schemes)
+[2.7: Projective Morphisms](https://github.com/justinli1128/jiahaoliAcademicWebsite/edit/main/AlgGeoPractice.md#27-projective-morphisms)
+
+[2.8: Differentials](https://github.com/justinli1128/jiahaoliAcademicWebsite/edit/main/AlgGeoPractice.md#28-differentials)
+
+[2.9: Formal Schemes](https://github.com/justinli1128/jiahaoliAcademicWebsite/edit/main/AlgGeoPractice.md#29-formal-schemes)
 
 
 # Chapter 2: Schemes
