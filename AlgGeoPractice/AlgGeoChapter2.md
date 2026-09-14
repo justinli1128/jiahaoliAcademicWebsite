@@ -2,7 +2,7 @@
 layout: default
 title: Practices in Chapter 2 of _Algebraic Geometry_ by R. Hartshorne (updating)
 ---
-(v.1.1.4)
+(v.1.1.5)
 
 [Chapter 2: Schemes](#Chapter 2: Schemes)
 
@@ -40,7 +40,7 @@ There exists $\phi: const_A\to \mathcal{A}$, by defining $a\in A\mapsto (f:U\to 
 
 ### 2.1.3
 #### a)
-   Show that $\varphi: \mathcal{F}\to \mathcal{G}$ is surjective iff the following holds: for every open set $U \subseteq  X$, and for every $s\in \mathcal{G}(U)$, there is a covering $ &#123 U\_i &#125 $ of $U$, and there are elements $t\_i \in \mathcal{F}(U\_i)$, such that $\varphi(t\_i)=s|\_{U\_i}$.
+   Show that $\varphi: \mathcal{F}\to \mathcal{G}$ is surjective iff the following holds: for every open set $U \subseteq  X$, and for every $s\in \mathcal{G}(U)$, there is a covering $ \left{ U\_i \right} $ of $U$, and there are elements $t\_i \in \mathcal{F}(U\_i)$, such that $\varphi(t\_i)=s|\_{U\_i}$.
    
 _proof:_
     
@@ -100,7 +100,7 @@ There is map
 
 #### c)
 
-Let $X=\Proj^1$ and let $Y= &#123 P,Q &#125 $ for $P\neq  Q\in X$. There is then $\F=i\_{\*}\Oc\_P\oplus i\_{\*}\Oc\_Q$ and 
+Let $X=\Proj^1$ and let $Y= \left{ P,Q \right} $ for $P\neq  Q\in X$. There is then $\F=i\_{\*}\Oc\_P\oplus i\_{\*}\Oc\_Q$ and 
     \\[
         0\to I\_Y\to \Oc\_X\to \F\to 0
     \\] is exact. Show, however, the section map $\Gamma(X, \Oc\_X)\to\Gamma(X, \F)$ is not surjective. (Leaves room for derived functors)
@@ -237,7 +237,7 @@ The general scheme case follows.
 
 ### 2.2.9
 
-If $X$ is a topological space, and $Z $ an irreducible closed subset of $X$, a generic point for $Z$ is a point $\xi$ such that $Z=\overline{ &#123 \xi &#125 }$. If $X$ is a scheme, show that every (nonempty) irreducible closed subset has a unique generic point. 
+If $X$ is a topological space, and $Z $ an irreducible closed subset of $X$, a generic point for $Z$ is a point $\xi$ such that $Z=\overline{ \left{ \xi \right} }$. If $X$ is a scheme, show that every (nonempty) irreducible closed subset has a unique generic point. 
 
 _proof:_
 
@@ -249,8 +249,8 @@ So $f\in I$ or $g\in I$.
 
 Therefore, $I$ is a generic point of $\spec(A)$. Since $Z$ is irreducible and $\spec(A)$ is open in $Z$, so $I$ is then a generic point of $Z$.
 
-If there are two generic point $\xi$ and $\xi'$, we have $\xi\in \overline{ &#123 \xi' &#125}$ and $\xi'\in \overline{&#123\xi
- &#125 }$. So any open neighbourhood of one contains the other. Since schemes are $T_0$, this implies $\xi=\xi'$.
+If there are two generic point $\xi$ and $\xi'$, we have $\xi\in \overline{ \left{ \xi' \right}}$ and $\xi'\in \overline{\left{\xi
+ \right} }$. So any open neighbourhood of one contains the other. Since schemes are $T_0$, this implies $\xi=\xi'$.
 
 ### 2.2.17 Criterion for Affineness
 
@@ -296,7 +296,7 @@ _proof:_
 
 First of all, $\A^1\_k\times\_{\spec(k)}\A^1\_k\cong \spec(k\[x\]\otimes\_kk\[y\])\cong \spec(k\[x,y\])=\A^2\_k$.
 
-Since we claim that for even closed $k$, this is not the product set. So let $k=\mathbb{C}$. There are points $ &#123 p \in \mathbb{C} &#125 $ and generic point $\xi$ for the underlying set of $\A^1\_k$. The product is $(p,q)\in \C^2$, $(\xi, q)$, $(p,\xi)$, and $(\xi,\xi)$. But $\A^2\_k$ has $(p,q)$ and only one generic point $\eta$.
+Since we claim that for even closed $k$, this is not the product set. So let $k=\mathbb{C}$. There are points $ \left{ p \in \mathbb{C} \right} $ and generic point $\xi$ for the underlying set of $\A^1\_k$. The product is $(p,q)\in \C^2$, $(\xi, q)$, $(p,\xi)$, and $(\xi,\xi)$. But $\A^2\_k$ has $(p,q)$ and only one generic point $\eta$.
 
 #### b)
 
@@ -388,7 +388,7 @@ We know for an integral scheme, the unique generic point comes from any one of t
 
 #### c)
 
-If $Y$ is a closed subset of $X$, then $\mathrm{codim}(Y,X) = \inf &#123 \dim \Oc\_{X,p}\| \ p \in Y &#125 $.
+If $Y$ is a closed subset of $X$, then $\mathrm{codim}(Y,X) = \inf \left{ \dim \Oc\_{X,p}\| \ p \in Y \right} $.
 
 _proof:_
 
@@ -396,7 +396,7 @@ We show that this is true first for irreducible closed set $Z$ of affine $\spec(
 
 Over the affine $\spec(A)$, we have that if $Z$ is a irreducible closed set of $\spec(A)$, then by Hilbert's Nullstellensatz, $Z=\spec(A/I)$ for some prime ideal $I$. The codimension of $\spec(A/I)$ in $\spec(A)$ is then the supremum of the strictly increasing prime ideals containing $I$. Now for any $p\in \spec(A/I)$, $p$ contains $I$, $ \Oc\_{X,p}=\Oc\_{\spec(A),p}$, so for any prime ideals chain in $\Oc\_{\spec(A),p}$, there is a corresponding prime ideals chain containing $I$. 
 
-The generic point of $\spec(A/I)$ is $I$, so we have that $\inf &#123\dim \Oc\_{\spec(A),p}\| \ p \in \spec(A/I)
+The generic point of $\spec(A/I)$ is $I$, so we have that $\inf \left{\dim \Oc\_{\spec(A),p}\| \ p \in \spec(A/I)
 ight}=\dim (\Oc\_{\spec(A),\eta_I})$, here $\eta_I$ is the inclusion of the generic point of $\spec(A/I)$ in $\spec(A)$, and the definition is precisely $\mathrm{codim}(\spec(A/I), \spec(A))$. 
 
 Suppose $Z$ is irreducible closed of $X$, then first of all $Z$ has a generic point $\eta$. Since $Z$ is connected, find a subfamily of cover of $X$ that covers $Z$, the locallity property that we have shown for codimension implies, that
