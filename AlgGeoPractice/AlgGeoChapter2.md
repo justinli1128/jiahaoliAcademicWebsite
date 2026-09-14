@@ -373,7 +373,7 @@ Suppose, $p\in \spec(B)$ is a closed point, so it is a maximal ideal, then it is
 
 By Ex. 1.1.10(b), we have that $\dim(X)=\sup\_i\dim (\spec(A\_i))$. We will show that $\dim(\spec(A\_i))=\dim (\spec(A\_j))$. Since $X$ is integral, it is irreducible, therefore, it is connected. So any two cover is connected through a chain of overlapping open cover $\spec(A\_i)$. Find a closed point $p$ on the overlap, the local ring of $p$ is determined completely by $p$, so we have 
 \\[
-\dim(\spec(A\_i))= \dim(\Oc\_{\spec(A\_i), p}\cong \dim(\Oc\_{\spec(A\_j), p}=\dim(\spec(A\_j))
+\dim(\spec(A\_i))= \dim(\Oc\_{\spec(A\_i), p})\cong \dim(\Oc\_{\spec(A\_j), p})=\dim(\spec(A\_j))
 \\]
 
 #### b)
