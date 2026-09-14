@@ -219,9 +219,9 @@ We define $g^{\sharp}: \Oc\_{\spec(A)}\to g\_{\*}\Oc\_X$ that takes $r'/r^n\in A
 Obviously $\alpha\circ \beta=id$. We show that this is true in the other direction.
 
 Assume for now $X=\spec(B)$.  A map $f: \spec(B) \to \spec(A)$, is induced by its top section $f^{\sharp}:A\to B$, from $(f^{\sharp})^{-1}$ on the primes ideals. This is equivalent to the kernel of the map 
-    \begin{align*}
+    \\[
         A\to B\to B\_{(p)}\to B\_{(p)}/m\_p
-    \end{align*} As preimage of $m_p$ in $B$ is $p$.
+    \\] As preimage of $m_p$ in $B$ is $p$.
 
 So for affine case, the continuous map we constructed agrees. Now for a general scheme $X$, there is an affine cover $\spec(A\_i)$. Since stalk is determined locally, we easily deduce that the continuous map $\beta\circ \alpha(f)$ agrees with that of $f$.
 
@@ -360,6 +360,18 @@ For any closed point $P\in X$, $\dim(X)=\dim(\Oc\_{X,p})$ , where for rings, we 
 
 _proof:_
 
+Let $X\to k$ be an integral scheme of finite type over field $k$, there is then a finite affine cover $\spec(A\_i)$ of $X$, such that each of $A\_i$ is a finitely generated $k$-algebra, hence there is a surjective $k\[X\_j\]\to A\_i$. Moreover, since $X$ is integral, then $A\_i$ are integral domain, hence $A\_i\cong k\[X\_j\]/I\_i$ for some prime ideal $I\_i$ of $k\[X\_j\]$. Note that a closed point $p\in X$ is closed in the cover it belongs.
+
+We first show the statement for affine $\spec(B)$. 
+
+First of all, by Example 2.3.2.7,
+\\[\dim(\spec(B))=\dim (B)\\]
+
+Suppose, $p\in \spec(B)$ is a closed point, so it is a maximal ideal, then it is a point belonging to the affine variety of $I$ in $\A^{m}\_k$, so by Theorem 1.3.2 c), we have that 
+\\[ \dim(B)=\dim(\Oc\_{\spec(B), p)}\\]
+
+By Ex. 1.1.10(b), we have that $\dim(X)=\sup\_i\dim (\spec(A\_i))$. We will show that $\dim(\spec(A\_i))=\dim (\spec(A\_j))$. Since $X$ is integral, it is irreducible, therefore, it is connected. So any two cover is connected through a chain of overlapping open cover $\spec(A\_i)$. Find a closed point $p$ on the overlap, the local ring of $p$ is determined completely by $p$, so we have 
+\\[\dim(\spec(A\_i))= \dim(\Oc\_{\spec(A\_i_), p)}\cong \dim(\Oc\_{\spec(A\_j), p)}=\dim(\spec(A\_j))\\]
 
 #### b)
 
@@ -368,12 +380,26 @@ Let $K(X)$ be the function field of $X$, then $\dim(X) =\mathrm{tr.d} K(X)/k$
 
 _proof:_
 
+We know for an integral scheme, the unique generic point comes from any one of the affine cover, so we just need to show that the statement is true for affine cases. This is just Theorem 1.3.2d).
+
 
 #### c)
 
-If $Y$ is a closed subset of $X$, then $\mathrm{codim}(Y,X) = \inf\{\dim \Oc_{X,p}\| \ p \in Y\}$.
+If $Y$ is a closed subset of $X$, then $\mathrm{codim}(Y,X) = \inf\{\dim \Oc\_{X,p}\| \ p \in Y\}$.
 
 _proof:_
+
+We show that this is true first for irreducible closed set $Z$ of affine $\spec(A)$. 
+
+Over the affine $\spec(A)$, we have that if $Z$ is a irreducible closed set of $\spec(A)$, then by Hilbert's Nullstellensatz, $Z=\spec(A/I)$ for some prime ideal $I$. The codimension of $\spec(A/I)$ in $\spec(A)$ is then the supremum of the strictly increasing prime ideals containing $I$. Now for any $p\in \spec(A/I)$, $p$ contains $I$, $ \Oc\_{X,p}=\Oc\_{\spec(A),p}$, so for any prime ideals chain in $\Oc\_{\spec(A),p}$, there is a corresponding prime ideals chain containing $I$. 
+
+The generic point of $\spec(A/I)$ is $I$, so we have that $\inf\{\dim \Oc\_{\spec(A),p}\| \ p \in \spec(A/I)\}=\dim (\Oc\_{\spec(A),\eta_I})$, here $\eta_I$ is the inclusion of the generic point of $\spec(A/I)$ in $\spec(A)$, and the definition is precisely $\mathrm{codim}(\spec(A/I), \spec(A))$. 
+
+Suppose $Z$ is irreducible closed of $X$, then first of all $Z$ has a generic point $\eta$. Since $Z$ is connected, find a subfamily of cover of $X$ that covers $Z$, the locallity property that we have shown for codimension implies, that
+\\[ \mathrm{codim}(Z, X)=\dim (\Oc\_{X, \eta})
+\\]
+
+The generalization is straight forward by looking at the generic point for all irreducible $Z\subseteq Y$ and their generic points.
 
 #### d)
 
@@ -381,11 +407,14 @@ If $Y$ is a closed subset of $X$, then $\dim (Y) + \mathrm{codim}(Y,X) = \dim (X
 
 _proof:_
 
+This once again comes from looking at irreducible closed set of affine. The first term is the chains of primes contained in $I$, and the second is the chain of primes containing $I$. Generalization is easy.
+
 #### e)
 
 If $U$ is a nonempty open subset of $X$, then $\dim (U) = \dim (X)$.
 
 _proof:_
+See a).
 
 #### f)
 
@@ -393,15 +422,7 @@ If $k\subseteq k'$ is a field extension, then every irreducible component of $X'
 
 _proof:_
 
-### 2.3.22* Dimension of the Fibres of a Morphism.
-
-Let $f:X\to Y$ be a dominant morphism (dense image) of integral schemes of finite type over a field $k$. 
-
-#### a)
-Let $Y'$ be a closed irreducible subset of Y, whose generic point $\eta$ is contained in $f(X)$. Let $Z$ be any irreducible component of $f^{-1}(Y')$ such that $\eta\in f(Z)$, show that
-\\[ \mathrm{codim}(Z,X)\leq \mathrm{codim}(Y',Y)\\]
-
-_proof:_
+We just need to show this on affine open, for which the pullback is $\spec(B\otimes\_{k}k')$. Since $k$ and $k'$ are both fields, this does not changes the dimension.
 
 
 ## 2.4: Separated and Proper Morphisms
