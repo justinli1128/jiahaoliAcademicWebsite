@@ -481,6 +481,49 @@ Let $X=k\[x\]/(x^2)$, let $U=X$, and let $Y=\A^1\_k$. Then the maps are determin
 
 Let $X=\A^1\_k$ and let $Y$ to be the line with two origin, so that is two $\A^1\_k$ glued together along $U:=\A^1\_k -0$. $U$ is dense in $X$ and in $Y$, we can define $f,g: X\to Y$ to be the inclusion of the two different line. They agree on $U$ but are not the same.
 
+### 2.4.3
+
+Let $X$ be a separated scheme over an affine scheme $S$. Let $U$ and $V$ be open affine subsets of $X$. Then $U \cap V$ is also affine. Give an example to show that this fails if $X$ is not separated.
+
+_proof:_
+
+Suppose $S=\spec(A)$, $U=\spec(B)$ and $V=\spec(C)$.
+   
+The diagonal $\Delta: X\to X\times\_S X$ is closed, and we have map $U\times\_S V\cong \spec(B\otimes\_A C)\to  X\times\_S X$
+
+The preimage $\Delta^{-1}(U\times\_S V)$ on $X$ is precisely $U\cap V$. Recall that closed immersion are affine (Ex. 3.11b)) so $U\cap V$ is affine.
+
+_counterexample:_
+
+Let $X$ be the affine plane with two origin, then choose $U$ to be one of the affine plane and $V$ the other one. Their intersection is $\A^2\_k-0$, which is not affine.
+
+### 2.4.5
+
+Let $X$ be an integral scheme of finite type over a field $k$, having function field $K$. We say that a valuation of $K/k$  has center $x$ on $X$ if its valuation ring $R$ ($v(r)\geq 0$), dominates the local ring $\Oc\_{X,x}$
+
+#### a)
+
+If $X$ is separated over $k$, then the center of any valuation of $K/k$ on $X$ (if it exists) is unique.
+
+_proof:_
+
+Given a valuation $v$ on $K$, there is then a valuation ring $R\to K$. There is then a commutative diagram containing $\spec(K)\to \spec(R)$, $\spec(K)\to X$ into the generic point, and over $\spec(k)$. Since $X$ is separated over $k$, there is at most one lifting $\spec(R)\to X$ by Theorem 4.3. Moreover, we have by Lemma 4.4, this is equivalent of finding a point $x\in X$ such that $R$ dominates $\Oc\_{X,x}$, we are done.
+
+#### b)
+
+If $X$ is proper over $k$, then every valuation of $K/k$ has a unique center on $X$.
+
+_proof:_
+
+See a).
+
+#### c)*
+
+Prove the converses of (a) and (b).
+
+_proof:_
+
+Let $P\to F$ be any valuative ring that forms a commutative diagram with $X$ over $k$. 
 
 ## 2.5: Sheaves of Modules
 ## 2.6: Divisors
