@@ -523,7 +523,31 @@ Prove the converses of (a) and (b).
 
 _proof:_
 
-Let $P\to F$ be any valuative ring that forms a commutative diagram with $X$ over $k$. 
+Let $P\to F$ be any valuative ring that forms a commutative diagram with $X$ over $k$. Let $x\in X$ be the point of $\spec(F)$
+
+There is the $\kappa(x)\cong K(X)\to F$, and we have that $P\cap K(X)$ is then a valuative ring of $K(X)$. 
+
+As our argument would be implied from showing the affine case, we just need to show that if there is $R\to K(R)\to F\xleftarrow P$ over $k$, and a lift $R\to P$. Then it must factors through $K(R)\cap P$. Then our statement would follow
+
+#### d)
+
+If $X$ is proper over $k$, and if $k$ is algebraically closed, show that $\Gamma(X,\Oc\_X) = k$.
+
+_proof:_
+
+\Gamma(X,\Oc\_X)
+Let $a\in\Gamma(X,\Oc\_X)$ such that $a\notin k$. $K(X)$ is a field containing $k$, since $k$ is closed, so we have that $a$ is transcendental over $k$.
+Therefore, we can choose a $R$ that is a valuation ring of $K(X)$ with maximal ideal of $R$ containing $a^{-1}$, so $a\notin R$. 
+
+We see there is $\spec(R)\xleftarrow \spec(K(X))\to X$ over $k$. Properness tells us there is a lift $\spec(R)\to X$, hence a map $\Gamma(X,\Oc\_X)\to R$. This implies $a\in R$, a contradiction.
+
+### 2.4.6 
+
+ Let $f: X\to Y$ be a proper morphism of affine varieties over $k$. Then $f$ is a finite morphism.
+
+_proof:_
+
+Assume that $X=\spec(B)$ and $Y=\spec(A)$. We have $K(X)=Q(B)$. The map are $B\to Q(B)$ and $R\to Q(B)$ for any valuative ring $R$ is injective. Let $P:=\mathrm{im}(A)$ the subring that is the image of $A$ in $Q(B)$. Since $f$ is proper, there exists an unique lift $B\to R$. This is injective, hence $B$ is a subring of $R$. We do this for all possible $R$ containing $P$, we then have by Theorem 3.4.11A, $B$ is integral over $P$, hence over $A$. So it is a finite algebra.
 
 ## 2.5: Sheaves of Modules
 ## 2.6: Divisors
