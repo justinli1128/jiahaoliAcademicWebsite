@@ -15,7 +15,7 @@ title: Practices in Chapter 2 of _Algebraic Geometry_ by R. Hartshorne (updating
 
 [2.4: Separated and Proper Morphisms](#24-separated-and-proper-morphisms)
 
-[2.5: Sheaves of Modules](#25-sheaves-of-Modules)
+[2.5: Sheaves of Modules](#25-sheaves-of-modules)
 
 
 [2.6: Divisors](#26-divisors)
