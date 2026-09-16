@@ -455,6 +455,32 @@ The existence follows from the fact that $B$ is finite over $A$, so for every $b
 
 Therefore, there exists an unique lift $\phi:B\to R$. 
 
+### 2.4.2
+
+Let $S$ be a scheme, let $X$ be a reduced scheme over $S$, and let $Y$ be a separated scheme over $S$. Let $f$ and $g$ be two $S$-morphisms of $X$ to $Y$ which agree on an open dense subset of $X$. Show that $f = g$. Give examples to show that this result fails if either (a) $X$ is nonreduced, or (b) $Y$ is nonseparated
+
+_proof:_
+
+Denote $U\subset X$ the open dense subset $f$ and $g$ agree on.
+
+Define $(f,g): X\to Y\times\_S Y$, and we have that $(f,g)\|\_U: U\to Y\times\_S Y$ factors through $Y$ by assumption.
+
+Since $Y\subset Y\times\_SY$ is closed ($Y$ is separated), we have that $(f,g)^{-1}(Y)$ is a closed set, and contains $U$. Therefore, the preimage must be $X$, hence $f=g$ on the continuous map.
+
+Of course, this does not implies that the sheaf map would agree. There is map $f^{\sharp}-g^{\sharp}:\Oc\_{Y}\to f\_{\*}\Oc\_{X}=g\_{\*}\Oc\_{X}$. Choose $s\in \Oc\_{Y}(V)$ for some open $V\subseteq Y$, we have that $(f^{\sharp}-g^{\sharp})(s)\|\_{f^{-1}(V)\cap U}=0$. Does this imply that $(f^{\sharp}-g^{\sharp})(s)=0\in \Oc\_X(f^{-1}(V))$. 
+
+We will show that for $X$ is reduced and $U$ is dense in $X$, then if for $s\in \Oc\_X(V)$ such that $s\|\_{U\cap V}=0$, then $s=0$. We show this for the affine case.
+
+Let $V=\spec(A)$, it is reduced so $A$ is a reduced ring. Since $U\cap V$ is open in $V$, there exists some standard open $D(r)\subseteq U\cap V$, for $r\in A$, $s\|\_{D(r)}=0$, means that there is $n$ such that $r^ns=0\in A$. However, $A$ is reduced so this can only mean that $a=0$. 
+
+#### a) $X$ not reduced
+
+Let $X=k\[x\]/(x^2)$, let $U=X$, and let $Y=\A^1\_k$. Then the maps are determined entirely by $k\[x\]\to k\[x\]/(x^2)$. Choose $f$ determined by $x\mapsto 0$, and $g$ determined by $x\mapsto x$. They induce the same continuous map, as there is only one point $(x)$ in $X$, and its preimage respect to both maps are $(x)$. Yet they are not the same scheme map
+
+#### b) $Y$ not separated
+
+Let $X=\A^1\_k$ and let $Y$ to be the line with two origin, so that is two $\A^1\_k$ glued together along $U:=\A^1\_k -0$. $U$ is dense in $X$ and in $Y$, we can define $f,g: X\to Y$ to be the inclusion of the two different line. They agree on $U$ but are not the same.
+
 
 ## 2.5: Sheaves of Modules
 ## 2.6: Divisors
