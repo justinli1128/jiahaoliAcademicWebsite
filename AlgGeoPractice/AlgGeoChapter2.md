@@ -430,6 +430,32 @@ We just need to show this on affine open, for which the pullback is $\spec(B\oti
 
 
 ## 2.4: Separated and Proper Morphisms
+
+### 2.4.1 
+
+Show that finite morphism are proper.
+
+_proof:_
+
+We know that by Ex.3.4, a finite morphism $f: X\to Y$, for every affine $U$, $f^{-1}(U)$ is affine. 
+
+Let $R\to k$ be a valuative ring and its quotient field. There are two point $m, (0)\in \spec(R)$, $m$ for the closed point and $(0)$ for the generic point. If we have $g:\spec(R)\to X$, any open $U$ containing $g(m)$ would must contain $g((0))$, since $g^{-1}(U)$ is open and the smallest open in $\spec(R)$ containing $m$ is itself. 
+
+So we can work completely in affine case. 
+
+We want to use Theorem 4.7 for properness, in affine case is equivalent to given $f:A\to B$, $i:R\to k$, $\varphi:A\to R$, and $\psi: B\to k$, there is an unique $\phi: B\to R$. 
+
+The uniqueness follows from the fact that any $\phi$ would agree with $\psi$ after composing with $i$, but $i$ is injective.
+ 
+The existence follows from the fact that $B$ is finite over $A$, so for every $b\in B$, there is a monic polynomial $p(x)$ over $A$ such that $p(b)=0$. If $x:=\psi (b)\notin R$, then we divide $\varphi(p(x))$ by $x^{n-1}$, where $n$ is the degree of $p(x)$. Since $x^{-1}\in R$ (as for a valuative ring $R$, for any $x\neq 0\in k$, $x\in k $ or $x^{-1}\in k$), we have that 
+
+\\[
+\frac{p(x)}{x^{n-1}}=x+\varphi(a\_{n-1})+\varphi(a\_{n-1})x^{-1}+...+\varphi(a\_0)x^{-n+1}=0
+\\] Since all of $\varphi(a\_i)$ and $x^{-1}$ are in $R$, then $x\in R$ as well.
+
+Therefore, there exists an unique lift $\phi:B\to R$. 
+
+
 ## 2.5: Sheaves of Modules
 ## 2.6: Divisors
 ## 2.7: Projective Morphisms
