@@ -8,7 +8,11 @@ title: Practices in of _Algebraic Geometry_ by R. Hartshorne (updating)
 (In Progress)
 
 [Chapter 3: Cohomology](AlgGeoChapter3.md/) 
-(Upcoming)
+(In Progress)
 
 [Chapter 4: Curves](AlgGeoChapter4.md/) 
 (Upcoming)
+
+[Chapter 5: Surfaces](AlgGeoChapter5.md/) 
+(Upcoming)
+
