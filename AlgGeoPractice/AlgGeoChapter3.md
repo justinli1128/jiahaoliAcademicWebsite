@@ -45,17 +45,19 @@ Let $X = \A^1$ be the affine line over an infinite field $k$. Let $P,Q$ be disti
 _proof:_
 
 Here $\mathbb{Z}\_U:=i\_!\mathbb{Z}$ the extension by zero of the constant sheaf outside of $U$. There is exact sequence
+
 \\[
 0\to \mathbb{Z}\_U\to \mathbb{Z}\to i\_P(\mathbb{Z})\oplus i\_Q(mathbb{Z})\to 0
 \\]
+
 Here $i\_P(A)$ stand for the skycraper of $A$ at $P$.
 
 We take the cohomology to get exact sequence.
 
 \\[
-0\to H^0(X,\mathbb{Z}\_U)\to \mathbb{Z}\xrightarrow{q} H^0(X,i\_P(\mathbb{Z})\oplus i\_Q(\mathbb{Z}))=\mathbb{Z}\oplus \mathbb{Z}
-\\ \to H^1(X,\mathbb{Z}\_U)\to 0
-\\] The map $q$ takes $s\mapsto (s\|\_P, s\|\_Q)$, which is definitely not surjective.
+0\to H^0(X,\mathbb{Z}\_U)\to \mathbb{Z}\xrightarrow{q} H^0(X,i\_P(\mathbb{Z})\oplus i\_Q(\mathbb{Z}))=\mathbb{Z}\oplus \mathbb{Z}\to H^1(X,\mathbb{Z}\_U)\to 0
+\\] 
+The map $q$ takes $s\mapsto (s\|\_P, s\|\_Q)$, which is definitely not surjective.
 
 
 
