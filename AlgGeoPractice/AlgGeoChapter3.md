@@ -103,7 +103,7 @@ Let $X$ be a topological space, let $Y$ be a closed subset, and let $\F$ be a sh
 
 #### a)
 
-Show that $\Gamm\a_Y$ is left exact functor $\mathrm{Ab}(X)\to \mathrm{Ab}$ (we denote $H^i\_Y$ the right derived functor of $\Gamma\_Y$
+Show that $\Gamma\_Y$ is left exact functor $\mathrm{Ab}(X)\to \mathrm{Ab}$ (we denote $H^i\_Y$ the right derived functor of $\Gamma\_Y$
 
 _proof:_
 
@@ -121,19 +121,19 @@ $f(s)=\alpha$. If $s$ is not compactly supported, and since $f$ is injective and
 
 #### b)
 
-If $0\to \F'\xrightarrow{f} \F\xrightarrow{g} \F''\to 0$ is exact with $\F'$ flasque, then 
-\\[0\to \Gamma\_Y(X, \F')\to \Gamma\_Y(X, \F)\to \Gamma\_Y(X, \F'')\to 0
+If $0\to \F'\xrightarrow{f} \F\xrightarrow{g} \F"\to 0$ is exact with $\F'$ flasque, then 
+\\[0\to \Gamma\_Y(X, \F')\to \Gamma\_Y(X, \F)\to \Gamma\_Y(X, \F")\to 0
 \\] is exact.
 
 _proof:_
 
 From a) we are left with showing $g$ is surjective.
 
-We know from Ex. 2.1.16b) that $g\|\_U$ is surjective for all open $U$. Suppose we have $\alpha \in \Gamma\_Y(X,\F'')$ and a $s\in \Gamma(X,\F)$ such that $\Gamma(g)(s)=\alpha$, is it supported on $Y$?
+We know from Ex. 2.1.16b) that $g\|\_U$ is surjective for all open $U$. Suppose we have $\alpha \in \Gamma\_Y(X,\F")$ and a $s\in \Gamma(X,\F)$ such that $\Gamma(g)(s)=\alpha$, is it supported on $Y$?
 
 We can take the restriction of the exact sequence onto $U=X-Y$, which gives us an exact sequence
 \\[
-0\to \F'(U)\xrightarrow{f}\F(U)\xrightarrow{g}\F''(U)
+0\to \F'(U)\xrightarrow{f}\F(U)\xrightarrow{g}\F"(U)
 \\]
 $\alpha\|\_U=0$ so $s\|\_U\in \ker g$, which by exactness, there is $t\in \F'(U)$ such that $f(t)=s\|\_U$. 
 
@@ -178,9 +178,9 @@ _proof:_
 
 Let $\F\to \G\_{\bullet}$ be some flasque resolution, $i\_{\*}\F\to i\_{\*}\G\_{\bullet}$ is then a flasque resolution of $i\_{\*}\F$. 
 
-There is then 
+There is then exact
 
-\\[  \Gamma\_{Y}(X,  \G\_{\bullet})\to \Gamma(X,  \G\_{\bullet})\to \Gamma(X, i\_{\*}\G\_{\bullet})= \Gamma(U, \G\_{\bullet})\\]
+\\[ 0\to \Gamma\_{Y}(X,  \G\_{\bullet})\to \Gamma(X,  \G\_{\bullet})\to \Gamma(X, i\_{\*}\G\_{\bullet})= \Gamma(U, \G\_{\bullet})\to 0\\]
 
 Which determines exactly the long exact sequence we want.
 
@@ -200,7 +200,30 @@ There is then natural isomorphism of cochain complex $\Gamma\_Y(X, \G\_{\bullet}
 
 ### 3.2.4 Mayer-Vietoris Sequence
 
+ Let $Y\_1, Y\_2$ be two closed subsets of $X$. Then there is a long exact sequence of cohomology with supports
 
+\\[
+...\to H^i\_{Y\_1\cap Y\_2}(X, \F)\to H^i\_{Y\_1}(X, \F)\oplus H^i\_{Y\_2}(X, \F)
+\to H^i\_{Y\_1\cup Y\_2}(X, \F)\to H^{i+1}\_{Y\_1\cap Y\_2}(X, \F)\to  ...\\]
+
+_proof:_
+
+Let $\F\to \G\_{\bullet}$ be a flasque resolution. 
+
+For each $i$, there is sequence
+\\[
+0\to \Gamma\_{Y\_1\cap Y\_2}(X, \G\_i)\xrightarrow{i\_1\oplus i\_2}\Gamma\_{Y\_1}(X, \G\_i)\oplus\Gamma\_{Y\_2}(X, \G\_i)\xrightarrow{(s,t)\mapsto s-t} \Gamma\_{Y\_1\cup Y\_2}(X, \G\_i)\to 0
+\\]
+
+We want to show that this is exact. 
+
+$i\_1\oplus i\_2$ is injective by construction. 
+
+For $\alpha\in \Gamma\_{Y\_1\cup Y\_2}(X, \G\_i)$, we have $\alpha\|\_{X-Y\_2}$ and $-\alpha\|\_{X-Y\_1}$. For each $j=1,2$, there is a $s\_j\in \Gamma(X, \G\_i)$ supported on $Y\_j$ that is a lift of local sections defined, similar to that in Ex.3.2.3b). So $\alpha=s\_i-s\_j$.
+
+Now for the middle. Obviously $\mathrm{im}\  i\_1\oplus i\_2 \subseteq \ker g$, since $s-s=0$. If $(s,t)\in \ker g$, then $s-t=0$ everywhere, Yet $(s-t)\|\_{X-Y\_1}=-t\|\_{X-Y\_1}$ and $$(s-t)\|\_{X-Y\_2}=s\|\_{X-Y\_2}$. So $s$ and $t$ are supported on $Y\_1\cap Y\_2$. 
+
+We are done.
 
 
 ## 3.3: Cohomology of a Noetherian Affine Scheme
