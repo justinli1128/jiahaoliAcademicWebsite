@@ -4,7 +4,7 @@ title: Practices in Chapter 2 of _Algebraic Geometry_ by R. Hartshorne (updating
 ---
 (v.1.1.5)
 
-[Chapter 2: Schemes](#Chapter 2: Schemes)
+[Chapter 2: Schemes](#chapter-2-schemes)
 
 [2.1: Sheaves](#21-sheaves)
 
@@ -552,24 +552,81 @@ Assume that $X=\spec(B)$ and $Y=\spec(A)$. We have $K(X)=Q(B)$. The map are $B\t
 
 ## 2.5: Sheaves of Modules
 
-### 2.5.1
- Let $(X, \Oc\_X)$ be a ringed space, and let $\F$ be a locally free $\Oc\_X$-module of finite rank. We define the dual of $\F$, denoted $\F^{\sharp}$, to be the sheaf $\HomSh\_{\Oc\_X}(\F, \Oc\_X)$
+### 2.5.2
+Let $R$ be a discrete valuation ring with quotient field $K$, and let $X = \spec R$.
 
 #### a)
 
- Show that $(\F^{\sharp})^{\sharp}\cong \F$
+To give an $\Oc\_X$-module is equivalent to giving an $R$-module $M$, a $K$-vector space $L$, and a homomorphism $p:M \otimes\_RK\to  L$.
+
+_proof:_
+
+Let $\F$ be a $\Oc\_X$-module.
+
+$X$ has three open set, $X$, $\emtpyset$ and $(0)$. Of course, a $\F$ is a sheaf, so $\F(\emptyset)=0$ for any $\F$.
+
+Denote $M=\F(X)$, by definition this is a $\Oc\_X(X)=R$-module. Denote $L=\F((0))$, this is a  $\Oc\_X((0))=R_{(0)}=K$-module.
+
+Of course, there is the restriction map, and by definition, it is a module map
+\\[
+p: \F(X)\otimes\_{\Oc\_X(X)}\Oc\_X((0))=M\otimes\_R K\to \F((0))= L
+\\]
+
+#### b)
+
+That $\Oc\_X$-module is quasi-coherent if and only if $p$ is an isomorphism.
+
+_proof:_
+
+By definition, there exists an affine open cover, such that $\F\|\_{U\_i}\cong \tilde{M}$. However, the only open cover of $X$ is just itself. So we have 
+
+\\[
+\F\cong \tilde{M}
+\\] Where the restriction is then localization
+\\[
+p:M\otimes\_{R}K\to M\_{(0)}
+\\] Which is an isomorphism.
+
+### 2.5.3
+
+ Let $f: X \to Y$ be a morphism of schemes.
+
+#### a)
+
+Show by example that if $\F$ is coherent on $X$, then $f\_{\*}\F$ need not be coherent on $Y$, even if $X$ and $Y$ are varieties over a field $k$.
+
+_example:_
+
+Let $X=\mathbb{G}\_m$ and $Y=\A^1\_k$, and let $f$ be the inclusion. Let $\F=\Oc\_X$, which is coherent. Then $f\_{\*}\Oc\_{X}=k\[x,x^{-1}\]$. This is not finitely generated as $k\[x\]$-module.
+
+#### b)
+
+Show that a closed immersion is a finite morphism 
+
+_proof:_
+
+Let $U=\spec(A)$ be an affine open of $Y$, then $f^{-1}(U)\cong \spec(A/I)$ for some ideal $I$ of $A$, which is obviously a finitely generated $A$-module.
+
+#### c)
+
+ If $f$ is a finite morphism of noetherian schemes, and if $\F$ is coherent on $X$, then $f\_{\*}\F$ is coherent over $Y$.
 
  _proof:_
 
- First of all, 
-\\[
-(\F^{\sharp})^{\sharp}=\HomSh\_{\Oc\_X}(\F^{\sharp}, \Oc\_X)=\HomSh\_{\Oc\_X}(\HomSh\_{\Oc\_X}(\F, \Oc\_X), \Oc\_X)
-\\]
+We show this for $Y=\spec(A)$ affine, the general case follows easily.
 
-There exists open cover $U\_i$ of $X$ such that $\F\|\_ {U\_i}\cong \Oc\_X^{d\_i}$. So we have that 
-\\[(\F^{\sharp})^{\sharp}\|\_{U\_i}\cong \F\|\_{U\_i}\\]
+There is an affine cover of $X$, $\spec(B\_i)$ such that each $B\_i$ is a finite $A$-algebra.
 
-Since it is a sheaf, this extends globally.
+By definition, for any open $U$ of $Y$, $f\_{\*}\F(U)=\F(f^{-1}(U))$ by definition. Over $U\_i$, $f\_{\*}\F(U)$ is then a finitely generated $B\_i$-module. Since $B\_i$ is finite over $A$, then $f\_{\*}\F(U)$ is a finitely generated $A$-module.
+
+### 2.5.6 Support
+
+#### a)
+Let $A$ be a ring, let $M$ be an $A$-module, let $X = \spec A$, and let $\F = \tilde{M}$. For any $m\in M = \Gamma(X, \F)$, show that $\mathrm{supp}(m)=V(\mathrm{Ann}\_A(m))$, where $\mathrm{Ann}\_A(m)$ is the annihilator of $m = \{a \in A: am = 0\}$.
+
+_proof:_
+
+We have that $p\in \mathrm{supp}(m)$ iff $m\neq 0\in \F\_{p}$.
 
 ## 2.6: Divisors
 ## 2.7: Projective Morphisms
