@@ -373,8 +373,13 @@ H^{n-2}\_a(M)=0\to H^{n-2}\_a(M/(x\_1))\to H^{n-1}\_a(M)=0
 \\] exact. This shows our argument.
 
 
+### 3.3.6
 
+Let $X$ be a noetherian scheme.
 
+#### a)
+
+Show that the sheaf $\G$ constructed in the proof of (3.6) is an injective object in the category $\mathrm{Qcoh}(X)$ of quasi-coherent sheaves on $X$. Thus $\mathrm{Qcoh}(X)$ has enough injectives.
 
 
 
