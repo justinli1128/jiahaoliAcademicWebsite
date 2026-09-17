@@ -221,12 +221,35 @@ $i\_1\oplus i\_2$ is injective by construction.
 
 For $\alpha\in \Gamma\_{Y\_1\cup Y\_2}(X, \G\_i)$, we have $\alpha\|\_{X-Y\_2}$ and $-\alpha\|\_{X-Y\_1}$. For each $j=1,2$, there is a $s\_j\in \Gamma(X, \G\_i)$ supported on $Y\_j$ that is a lift of local sections defined, similar to that in Ex.3.2.3b). So $\alpha=s\_i-s\_j$.
 
-Now for the middle. Obviously $\mathrm{im}\  i\_1\oplus i\_2 \subseteq \ker g$, since $s-s=0$. If $(s,t)\in \ker g$, then $s-t=0$ everywhere, Yet $(s-t)\|\_{X-Y\_1}=-t\|\_{X-Y\_1}$ and $$(s-t)\|\_{X-Y\_2}=s\|\_{X-Y\_2}$. So $s$ and $t$ are supported on $Y\_1\cap Y\_2$. 
+Now for the middle. Obviously $\mathrm{im}\  i\_1\oplus i\_2 \subseteq \ker g$, since $s-s=0$. If $(s,t)\in \ker g$, then $s-t=0$ everywhere, Yet $(s-t)\|\_{X-Y\_1}=-t\|\_{X-Y\_1}$ and $(s-t)\|\_{X-Y\_2}=s\|\_{X-Y\_2}$. So $s$ and $t$ are supported on $Y\_1\cap Y\_2$. 
 
 We are done.
 
 
 ## 3.3: Cohomology of a Noetherian Affine Scheme
+
+### 3.3.1 
+
+Let $X$ be a noetherian scheme. Show that $X$ is affine if and only if $X\_{red}$ is affine.
+
+_proof:_
+
+If $X$ is affine, then $X\_{red}$ is obvious affine. 
+
+Now if $X\_{red}$ is affine. Denote $i: X\_{red}\to X$. Let $\mathcal{N}il$ be the sheaf of nilpotents of $X$. Given a $\F$ quasicoherent over $X$, there is then a filtration $\mathcal{N}il^n \F\subseteq \F$. Denote $\F\_j:=\mathcal{N}il^n \F/\mathcal{N}il^{n+1} \F$. This is then quasicoherent as well. 
+
+Note that $\mathcal{N}il\F\_j=0$, so it is a $X\_{red}$-module, and $H^{i}(X,\mathcal{N}il\F\_j)\cong H^{i}(X\_{red},\mathcal{N}il\F\_j)$, since they have the same underlying space.
+
+There is then a long exact sequence
+
+\\[
+...\to H^i(X, \mathcal{N}il^{n+1} \F)\to H^i(X, \mathcal{N}il^{n} \F)\to H^{i}(X\_{red},\mathcal{N}il\F\_j)
+\to H^{i+1}(X, \mathcal{N}il^{n+1} \F)\to ...\\]
+
+Since $X$ is noetherian, $\mathcal{N}il^{n}=0$ for big enough $n$, and since $X\_{red}$ is affine, higher cohomology vanishes. Therefore, we can deduce that
+
+$H^i(X, \mathcal{N}il^{n} \F)=0$ for all $n$. Let $n=0$ for our case.
+
 ## 3.4: Cech Cohomology
 ## 3.5: The Cohomology of Projective Space
 ## 3.6: Ext Groups and Sheaves
