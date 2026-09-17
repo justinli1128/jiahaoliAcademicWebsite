@@ -535,7 +535,6 @@ If $X$ is proper over $k$, and if $k$ is algebraically closed, show that $\Gamma
 
 _proof:_
 
-\Gamma(X,\Oc\_X)
 Let $a\in\Gamma(X,\Oc\_X)$ such that $a\notin k$. $K(X)$ is a field containing $k$, since $k$ is closed, so we have that $a$ is transcendental over $k$.
 Therefore, we can choose a $R$ that is a valuation ring of $K(X)$ with maximal ideal of $R$ containing $a^{-1}$, so $a\notin R$. 
 
@@ -554,21 +553,21 @@ Assume that $X=\spec(B)$ and $Y=\spec(A)$. We have $K(X)=Q(B)$. The map are $B\t
 ## 2.5: Sheaves of Modules
 
 ### 2.5.1
- Let $(X, \Oc\_X)$ be a ringed space, and let $\F$ be a locally free $\Oc\_X$-module of finite rank. We define the dual of $\F$, denoted $\F^#$, to be the sheaf $\HomSh\_{\Oc\_X}(\F, \Oc\_X)$
+ Let $(X, \Oc\_X)$ be a ringed space, and let $\F$ be a locally free $\Oc\_X$-module of finite rank. We define the dual of $\F$, denoted $\F^{\sharp}$, to be the sheaf $\HomSh\_{\Oc\_X}(\F, \Oc\_X)$
 
  #### a)
 
- Show that $(\F^#)^#\cong \F$
+ Show that $(\F^{\sharp})^{\sharp}\cong \F$
 
  _proof:_
 
  First of all, 
 \\[
-(\F^#)^#=\HomSh\_{\Oc\_X}(\F^#, \Oc\_X)=\HomSh\_{\Oc\_X}(\HomSh\_{\Oc\_X}(\F, \Oc\_X), \Oc\_X)
+(\F^{\sharp})^{\sharp}=\HomSh\_{\Oc\_X}(\F^{\sharp}, \Oc\_X)=\HomSh\_{\Oc\_X}(\HomSh\_{\Oc\_X}(\F, \Oc\_X), \Oc\_X)
 \\]
 
 There exists open cover $U\_i$ of $X$ such that $\F\|\_ {U\_i}\cong \Oc\_X^{d\_i}$. So we have that 
-\\[(\F^#)^#\|\_{U\_i}\cong \F\|\_{U\_i}\\]
+\\[(\F^{\sharp})^{\sharp}\|\_{U\_i}\cong \F\|\_{U\_i}\\]
 
 Since it is a sheaf, this extends globally.
 
