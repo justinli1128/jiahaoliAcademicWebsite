@@ -547,7 +547,9 @@ We see there is $\spec(R)\xleftarrow \spec(K(X))\to X$ over $k$. Properness tell
 
 _proof:_
 
-Assume that $X=\spec(B)$ and $Y=\spec(A)$. We have $K(X)=Q(B)$. The map are $B\to Q(B)$ and $R\to Q(B)$ for any valuative ring $R$ is injective. Let $P:=\mathrm{im}(A)$ the subring that is the image of $A$ in $Q(B)$. Since $f$ is proper, there exists an unique lift $B\to R$. This is injective, hence $B$ is a subring of $R$. We do this for all possible $R$ containing $P$, we then have by Theorem 3.4.11A, $B$ is integral over $P$, hence over $A$. So it is a finite algebra.
+Assume that $X=\spec(B)$ and $Y=\spec(A)$. We have $K(X)=Q(B)$. The map are $B\to Q(B)$ and $R\to Q(B)$ for any valuative ring $R$ is injective. Let $P:=\mathrm{im}(A)$ the subring that is the image of $A$ in $Q(B)$. Since $f$ is proper, there exists an unique lift $B\to R$. This is injective, hence $B$ is a subring of $R$. We do this for all possible $R$ containing $P$, we then have by Theorem 3.4.11A, $B$ is integral over $P$, hence over $A$. So it is a finite $A$-algebra.
+
+
 
 ## 2.5: Sheaves of Modules
 ## 2.6: Divisors
