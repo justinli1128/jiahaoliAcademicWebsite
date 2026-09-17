@@ -250,6 +250,135 @@ Since $X$ is noetherian, $\mathcal{N}il^{n}=0$ for big enough $n$, and since $X\
 
 $H^i(X, \mathcal{N}il^{n} \F)=0$ for all $n$. Let $n=0$ for our case.
 
+### 3.3.2
+
+Let $X$ be a reduced noetherian scheme. Show that $X$ is affine if and only if each irreducible component is affine.
+
+_proof:_
+
+($\implies$) If $X$ is affine, then we have that each irreducible component must be affine.
+
+($\impliedby$) Let $X=X\_1\cup X\_2\cup...\cup X\_n$ be irreducible decomposition. By assumption, $X\_i$ are affine $\spec(A\_i)$.
+
+We show the statement inductively on $n$. 
+
+For $n=2$, $X=X\_1\cup X\_2$. Since $X\_1\cap X\_2$ is an irreducible of affines, it is itself affine. For any quasicoherent $\F$, there is exact sequence
+\\[
+0\to \F\to i\_1^{\*}\F\oplus i\_2^{\*}\F\to i\_{12}^{\*}\F\to 0
+\\] There is then a long exact sequence
+
+\\[...\to H^i(X, \F)\to H^i(X\_1,\F)\otimes H^i(X\_2,\F)\to H^i(X\_1\cap X\_2,\F)\to H^{i+1}(\X, \F)\to ...\\]
+Since $X\_i$ and $X\_1\cap X\_2$ are all affine and noetherian, $H^i=0$. Therefore, $H^i(X,\F)=0$ for $i>0$. So affine.
+
+Let $X=X\_1\cup...\cup X\_{n-1}\cup X\_n$, since $X\_1\cup...\cup X\_{n-1}$ is affine, and $(X\_1\cup...\cup X\_{n-1})\cap X\_n$ is irreducible of affine, so affine as well, our argument follows.
+
+### 3.3.3
+Let $A$ be a noetherian ring, and let $a$ be an ideal of $A$.
+
+#### a)
+
+Show that $\Gamma\_a(-)$ is a left exact functor from the category of $A$-modules
+to itself. We denote its right derived functors, calculated in $\mathrm{Mod}(A)$ by $H^i\_a(-)$
+
+_proof:_
+
+By definition $\Gamma\_a(M)=\{m\in M: \text{there is } n, a^nm=0 \}. For $f: M\to N$, then we have that if $m\in M$ such that $a^nm=0$ for some $n$, then $a^nf(m)=f(a^nm)=0$.
+
+Given exact sequence
+\\[
+0\to M'\xrightarrow{f} M \xrightarrow{g} M"
+\\]
+
+Injectivity is trivial. If $m\in \ker g$, then there is an $m' \in M'$ such that $f(m')=m$. Since $a^nm=0$, then $f(a^nm')=0$. But $f$ is injective, so $a^nm'=0$.
+
+#### b)
+Now let $X = \spec(A)$, $Y = V(a)$. Show that for any $A$-module $M$, $H^i_a(M)\cong H^i\_Y(X, \tilde{M})$
+
+_proof:_
+
+Since $A$ is noetherian, we can find an injective resolution $M\to I\_{\bullet}$, which determines a flasque resolution $\tilde{M}\to \tilde{I\_{\bullet}}$. Therefore, as long as we show that $\Gamma\_a(N)\cong \Gamma\_Y(X, \tilde{N})$, then the statement follows. Note that there is isomorphism $N\cong \Gamma(X, \tilde{N})$, we just need to show that a section is annihilated by power of $a$ iff $s$ is supported on $V(a)$.
+
+Since $A$ is noetherian, $a$ is finitely generated $(f\_1,...,f\_n)$, so $V(a)=V(f\_1)\cap ...\cap V(f\_n)$. 
+
+Suppose, $s\in \Gamma\_Y(X, \tilde{N})$, then $s\|\_{D(f\_i)}=0$ for all $i$. Then by Lemma 1.5.3a), $f\_i^{n\_i}s=0\in \Gamma(X, \tilde{N})$. Therefore, $s\in \Gamma\_a(N)$.
+
+On the other hand, if $s\in\Gamma\_a(N)$, then $s\|\_{D(f\_i)}=b/f\_{i}^n$ for some $b \in N$. But $f\_{i}^n s=0$ so $s\in \Gamma\_Y(X, \tilde{N})$. 
+
+#### c)
+
+For any $i$, show that $\Gamma\_a(H^i\_a(M))=H^i\_a(M)$.
+
+_proof:_
+
+Let $M\to I\_{\bullet}$ be an injective resolution. Apply $\Gamma\_a(-)$ we have cochain complex
+\\[
+0\to  \Gamma\_a(I\_1)\to \Gamma\_a(I\_2)\to...
+\\]
+
+Since every element in the cochain complex are annihilated by powers of $a$, then the cohomology are annihilated as well.
+
+### 3.3.4 Cohomological Interpretation of Depth.
+If $A$ is a ring, $a$ an ideal, and $M$ an $A$- module, then $depth\_a M$ is the maximum length of an $M$ -regular sequence $x\_1, ... ,x\_n$ with all $x\_i\in a$.
+
+#### a)
+Assume that $A$ is noetherian. Show that if $depth\_a M \geq 1$, then $\Gamma\_a(M)=0$, and the converse is true if $M$ is finitely generated. 
+
+_proof:_
+
+Since $depth\_a M\geq 1$, there exists $x\in a$ such that $x$ is not a zero divisor. If $m\in\Gamma\_a(M)$, then there is $n$ such that $a^nm=0$. But then $x^nm \in a^nm$ which is not zero for any $n$ unless $m=0$.
+
+On the other hand, suppose $\Gamma\_a(M)=0$ and $M$ is finitedly generated.
+
+If $depth\_a M=0$, then for every $x\in a$, there is $m\in M$ such that $xm=0$. In other words, all $x\in a$ are zero divisors. 
+
+For noetherian ring $A$, we have that the zero divisors are $\cup_{p \in \mathrm{Ass}\_A(M)}p$, here $\mathrm{Ass}\_A(M)$ is the set of associated prime ideals of $M$. That is $\mathrm{Ann}\_A(m)$ for some $m$ that is maximal.
+
+Since $A$ is noetherian, $ \mathrm{Ass}\_A(M)$ is finite. We have $a\subseteq \cup_{p \in \mathrm{Ass}\_A(M)}p$, so by prime avoidance, $a\subseteq p=\mathrm{Ann}\_A(m)$ for some $m\in M$.
+
+Therefore, $am=0$ so $m\in\Gamma\_a (M)$, a contradiction.
+
+#### b)
+
+Show inductively, for $M$ finitely generated, that for any $n \geq 0$, the following conditions are equivalent:
+
+i) $depth\_a M\geq n$
+ii) $H^i\_a(M)=0$ for $i <n$
+
+_proof:_
+
+For $n=1$, this is a). 
+
+Suppose this is true for $n-1$. 
+($\implies$) Let $M$ be a module of $depth\_a M\geq n$, so there is a $x\_1,...,x\_n\in a$ that is a $M$-regular sequence, so $x\_2,...,x\_n$ is a $M/x\_1$-regular sequence, and $depth \_a M/x\_1\geq n-1$. Therefore, $H^i\_a( M/x\_1)=0$ for $i <n-1$
+
+We have that 
+\\[
+0\to M\xrightarrow{x\_1}M \to M/x\_1\to 0
+\\] is short exact, since $x\_1$ is not a zero divisor. 
+
+There is then long exact sequence
+\\[
+0\to H^{n-1}\_a(M)\xrightarrow{x\_1}H^{n-1}\_a(M)\to H^{n-1}\_a(M/x\_1)
+\\] So $x\_1$ is not a zero divisor in $H^{n-1}\_a(M)$. 
+
+Therefore $depth\_a H^{n-1}\_a(M)\geq 1$, hence $\Gamma\_a(H^{n-1}\_a(M))=0$ by a). However, from Ex 3.3.3c), $\Gamma\_a(H^{n-1}\_a(M))=H^{n-1}\_a(M)$, so $H^{n-1}\_a(M)=0$. 
+
+($\impliedby$)
+Once again, induction on $n$. Suppose true for $n-1$.
+If $H^i\_a(M)=0$ for $i <n$. We know that $M$ has at least depth $n-1$. So there is a $M$-regular sequence $x\_1,...,x\_{n-1}\in a$. Then $M/(x\_1)$ has depth $\geq n-2$. If $H^{n-2}\_a(M/(x\_1))=0$, then we have that $M/(x\_1)$ has depth $\geq n-1$, and $M$ has depth $\geq n$.
+
+We have that $H^{n-1}\_a(M)=0$ and H^{n-2}\_a(M)=0, so there is 
+\\[
+H^{n-2}\_a(M)=0\to H^{n-2}\_a(M/(x\_1))\to H^{n-1}\_a(M)=0
+\\] exact. This shows our argument.
+
+
+
+
+
+
+
+
 ## 3.4: Cech Cohomology
 ## 3.5: The Cohomology of Projective Space
 ## 3.6: Ext Groups and Sheaves
