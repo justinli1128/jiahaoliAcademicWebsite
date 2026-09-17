@@ -555,7 +555,7 @@ Assume that $X=\spec(B)$ and $Y=\spec(A)$. We have $K(X)=Q(B)$. The map are $B\t
 ### 2.5.1
  Let $(X, \Oc\_X)$ be a ringed space, and let $\F$ be a locally free $\Oc\_X$-module of finite rank. We define the dual of $\F$, denoted $\F^{\sharp}$, to be the sheaf $\HomSh\_{\Oc\_X}(\F, \Oc\_X)$
 
- #### a)
+#### a)
 
  Show that $(\F^{\sharp})^{\sharp}\cong \F$
 
