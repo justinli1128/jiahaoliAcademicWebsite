@@ -381,10 +381,79 @@ Let $X$ be a noetherian scheme.
 
 Show that the sheaf $\G$ constructed in the proof of (3.6) is an injective object in the category $\mathrm{Qcoh}(X)$ of quasi-coherent sheaves on $X$. Thus $\mathrm{Qcoh}(X)$ has enough injectives.
 
+_proof:_
 
+Let's recall the construction of $\G$. 
 
+Let $\F$ be a quasicoherent $X$-module$. Find a (finite, since $X$ is noetherian) affine cover $U\_i=\spec(A\_i)$ of $X$ such that $\F\|\_{U\_i}=\tilde{M\_i}$ for some $A\_i$-module $M\_i$. This always exists by construction. Find an injective $A\_i$-module $I\_i$ and embedding $M\_i\to I\_i$ for each $i$. There is then a sheaf map $\F\|\_{U\_i}\to \tilde{I\_i}$. Define $\G:=\bigoplus\_i f\_{\*}\tilde{I\_i}$ (or simply the product as $i$ is finite). There is an morphsm $\F\to \G$, which is clearly an injection.
 
-## 3.4: Cech Cohomology
+The key is to show that $\Hom\_{\Oc\_X}(-, \G)$ is exact. First of all, we have that 
+\\[\Hom\_{\Oc\_X}(-, \G)=\Hom\_{\Oc\_X}(-, \bigoplus\_i f\_{\*}\tilde{I\_i})
+\cong \bigoplus\_i \Hom\_{\Oc\_X}(-, f\_{\*}\tilde{I\_i})\cong\bigoplus\_i \Hom\_{\Oc\_{U\_i}}(f^{\*}(-), \tilde{I\_i})
+\\]
+
+Since $f:U\_i\to X$ is an open immersion, $f^{-1}\mathcal{N}\cong \mathcal{N}\|\_{U\_i}$. Therefore, $f^{-1}$  is exact. Moreover, since $f^{-1}\Oc\_{X}\cong \Oc\_{U\_i}$ and $f^*=\Oc\_{U\_i}\otimes\_{f^{-1}\Oc\_{X}}f^{-1}$, so $f^{\*}$ is also exact.
+
+Since $U\_i$ are affine, and ${I\_i}$ is an injective $A\_i$-module, $\Hom\_{\Oc\_{U\_i}}(-, \tilde{I\_i})$ is exact. 
+
+Now, $\Hom\_{\Oc\_{U\_i}}(f^{\*}(-), \tilde{I\_i})$ is the composition of exact functors, so it is exact as well. Lastly, $\Hom\_{\Oc\_X}(-, \G)$ is the product of exact functors, it is itself exact.
+
+Therefore, $\G$ is injective.
+
+#### b)*
+
+Show that any injective object of $\mathrm{Qcoh}(X)$ is flasque. 
+
+_proof:_
+
+We first show that for any open subset $i:U\to X$, if $\F$ is injective over $X$ then $\F\|\_{U}$ is injective $\Oc\_U$.  Suppose we have $\G\to \G'$ injection over $U$, and a map $\G\to \F\|\_{U}$, we wish to extend to a $\G'\to\F\|\_{U}$.
+
+Suppose $\G$ and $\G'$ are coherent, then by Ex 2.5.15, there exists coherent module and injection $\G\_X\to \G'\_X$ that restrict to $\G\to \G'$, and there is a map $\G\_X\to \F$ that restrict to $\G\to \F\|\_{U}$. Thus a lift exists. 
+
+By Ex 2.5.15e), any quasicoherent modules are union of coherent modules, so we are good. 
+
+Let $\F\in \mathrm{Qcoh}(X)$ be an injective module. Choose an affine cover $U\_i=\spec(A\_i)$ such that $\F\|\_{U\_i}=\tilde{I\_i}$. We have that $I\_i$ must be injective from the above. Then by Lemma 3.3.3, the map between any injective module $I$ to its localization over a noetherian ring is surjective. Hence, $\F$ is flasque.
+
+#### c)
+
+Conclude that one can compute cohomology as the derived functors of $\Gamma(X, -)$ considered as a functor from $\mathrm{Qcoh}(X)$ to $\mathrm{Ab}$.
+
+_proof:_
+
+Ah Doiii.
+
+## 3.4: \text{\v{C}}ech Cohomology
+
+### 3.4.1
+
+Let $f:X \to Y$ be an affine morphism of noetherian separated schemes. Show that for any quasi-coherent sheaf $\F$ on $X$, there are natural isomorphisms for all $i\geq 0$
+\\[
+H^{i}(X, \F)\cong H^{i}(Y, f\_{\*}\F)
+\\]
+_proof:_
+
+Since $Y$ is noetherian and separated, theorem 3.4.5 says that for an ordered open cover $\mathfrak{U}$, we have 
+
+\\[
+\v{H}^i(\mathfrak{U}, \G)\xrightarrow{\cong} H^i(Y, \G)
+\\] The same would follow for $X$.
+
+Choose an ordered affine cover $\mathfrak{U}$ of $Y$, then $f^{-1}(\mathfrak{U})$ is then an affine cover of $X$, as $f$ is affine.
+
+The \text{\v{C}}ech cochain of $f\_{\*}$ over $\mathfrak{U}$ is 
+\\[
+\v{C}^n(\mathfrak{U}, f\_{\*}\F)=\prod\_{i\_0\leq i\_1\leq ...\leq i\_n}f\_{\*}\F(U\_{i\_0,i\_1,...,i\_n})
+\cong \prod\_{i\_0\leq i\_1\leq ...\leq i\_n}\F(f^{-}(U\_{i\_0,i\_1,...,i\_n}))
+=\v{C}^n(f^{-1}\mathfrak{U}, \F)
+\\]
+Therefore, the cohomology are the same.
+
+### 3.4.2
+
+Prove Chevalley's theorem: Let $f : X \to Y $ be a finite surjective morphism of noetherian separated schemes, with $X$ affine. Then $Y$ is affine
+
+#### a)
+
 ## 3.5: The Cohomology of Projective Space
 ## 3.6: Ext Groups and Sheaves
 ## 3.7: The Serre Duality Theorem
