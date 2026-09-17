@@ -267,7 +267,7 @@ For $n=2$, $X=X\_1\cup X\_2$. Since $X\_1\cap X\_2$ is an irreducible of affines
 0\to \F\to i\_1^{\*}\F\oplus i\_2^{\*}\F\to i\_{12}^{\*}\F\to 0
 \\] There is then a long exact sequence
 
-\\[...\to H^i(X, \F)\to H^i(X\_1,\F)\otimes H^i(X\_2,\F)\to H^i(X\_1\cap X\_2,\F)\to H^{i+1}(\X, \F)\to ...\\]
+\\[...\to H^i(X, \F)\to H^i(X\_1,\F)\oplus H^i(X\_2,\F)\to H^i(X\_1\cap X\_2,\F)\to H^{i+1}(X, \F)\to ...\\]
 Since $X\_i$ and $X\_1\cap X\_2$ are all affine and noetherian, $H^i=0$. Therefore, $H^i(X,\F)=0$ for $i>0$. So affine.
 
 Let $X=X\_1\cup...\cup X\_{n-1}\cup X\_n$, since $X\_1\cup...\cup X\_{n-1}$ is affine, and $(X\_1\cup...\cup X\_{n-1})\cap X\_n$ is irreducible of affine, so affine as well, our argument follows.
@@ -282,7 +282,7 @@ to itself. We denote its right derived functors, calculated in $\mathrm{Mod}(A)$
 
 _proof:_
 
-By definition $\Gamma\_a(M)=\{m\in M: \text{there is } n, a^nm=0 \}. For $f: M\to N$, then we have that if $m\in M$ such that $a^nm=0$ for some $n$, then $a^nf(m)=f(a^nm)=0$.
+By definition $\Gamma\_a(M)=\{m\in M: \text{there is } n, a^nm=0 \}$. For $f: M\to N$, then we have that if $m\in M$ such that $a^nm=0$ for some $n$, then $a^nf(m)=f(a^nm)=0$.
 
 Given exact sequence
 \\[
@@ -367,7 +367,7 @@ Therefore $depth\_a H^{n-1}\_a(M)\geq 1$, hence $\Gamma\_a(H^{n-1}\_a(M))=0$ by 
 Once again, induction on $n$. Suppose true for $n-1$.
 If $H^i\_a(M)=0$ for $i <n$. We know that $M$ has at least depth $n-1$. So there is a $M$-regular sequence $x\_1,...,x\_{n-1}\in a$. Then $M/(x\_1)$ has depth $\geq n-2$. If $H^{n-2}\_a(M/(x\_1))=0$, then we have that $M/(x\_1)$ has depth $\geq n-1$, and $M$ has depth $\geq n$.
 
-We have that $H^{n-1}\_a(M)=0$ and H^{n-2}\_a(M)=0, so there is 
+We have that $H^{n-1}\_a(M)=0$ and $H^{n-2}\_a(M)=0$, so there is 
 \\[
 H^{n-2}\_a(M)=0\to H^{n-2}\_a(M/(x\_1))\to H^{n-1}\_a(M)=0
 \\] exact. This shows our argument.
