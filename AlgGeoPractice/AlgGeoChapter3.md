@@ -238,7 +238,7 @@ If $X$ is affine, then $X\_{red}$ is obvious affine.
 
 Now if $X\_{red}$ is affine. Denote $i: X\_{red}\to X$. Let $\mathcal{N}il$ be the sheaf of nilpotents of $X$. Given a $\F$ quasicoherent over $X$, there is then a filtration $\mathcal{N}il^n \F\subseteq \F$. Denote $\F\_j:=\mathcal{N}il^n \F/\mathcal{N}il^{n+1} \F$. This is then quasicoherent as well. 
 
-Note that $\mathcal{N}il\F\_j=0$, so it is a $X\_{red}$-module, and $H^{i}(X,\mathcal{N}il\F\_j)\cong H^{i}(X\_{red},\mathcal{N}il\F\_j)$, since they have the same underlying space.
+Note that $\mathcal{N}il\F\_j=0$, so it is a $X\_{red}$-module, and $H^{i}(X,F\_j)\cong H^{i}(X\_{red},\F\_j)$, since they have the same underlying space.
 
 There is then a long exact sequence
 
