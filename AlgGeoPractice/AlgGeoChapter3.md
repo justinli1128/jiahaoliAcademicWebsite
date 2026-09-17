@@ -385,7 +385,7 @@ _proof:_
 
 Let's recall the construction of $\G$. 
 
-Let $\F$ be a quasicoherent $X$-module$. Find a (finite, since $X$ is noetherian) affine cover $U\_i=\spec(A\_i)$ of $X$ such that $\F\|\_{U\_i}=\tilde{M\_i}$ for some $A\_i$-module $M\_i$. This always exists by construction. Find an injective $A\_i$-module $I\_i$ and embedding $M\_i\to I\_i$ for each $i$. There is then a sheaf map $\F\|\_{U\_i}\to \tilde{I\_i}$. Define $\G:=\bigoplus\_i f\_{\*}\tilde{I\_i}$ (or simply the product as $i$ is finite). There is an morphsm $\F\to \G$, which is clearly an injection.
+Let $\F$ be a quasicoherent $X$-module. Find a (finite, since $X$ is noetherian) affine cover $U\_i=\spec(A\_i)$ of $X$ such that $\F\|\_{U\_i}=\tilde{M\_i}$ for some $A\_i$-module $M\_i$. This always exists by construction. Find an injective $A\_i$-module $I\_i$ and embedding $M\_i\to I\_i$ for each $i$. There is then a sheaf map $\F\|\_{U\_i}\to \tilde{I\_i}$. Define $\G:=\bigoplus\_i f\_{\*}\tilde{I\_i}$ (or simply the product as $i$ is finite). There is an morphsm $\F\to \G$, which is clearly an injection.
 
 The key is to show that $\Hom\_{\Oc\_X}(-, \G)$ is exact. First of all, we have that 
 \\[\Hom\_{\Oc\_X}(-, \G)=\Hom\_{\Oc\_X}(-, \bigoplus\_i f\_{\*}\tilde{I\_i})
@@ -422,7 +422,7 @@ _proof:_
 
 Ah Doiii.
 
-## 3.4: \text{\v{C}}ech Cohomology
+## 3.4: Cech Cohomology
 
 ### 3.4.1
 
@@ -435,16 +435,16 @@ _proof:_
 Since $Y$ is noetherian and separated, theorem 3.4.5 says that for an ordered open cover $\mathfrak{U}$, we have 
 
 \\[
-\v{H}^i(\mathfrak{U}, \G)\xrightarrow{\cong} H^i(Y, \G)
+{H}^i(\mathfrak{U}, \G)\xrightarrow{\cong} H^i(Y, \G)
 \\] The same would follow for $X$.
 
 Choose an ordered affine cover $\mathfrak{U}$ of $Y$, then $f^{-1}(\mathfrak{U})$ is then an affine cover of $X$, as $f$ is affine.
 
-The \text{\v{C}}ech cochain of $f\_{\*}$ over $\mathfrak{U}$ is 
+The Cech cochain of $f\_{\*}$ over $\mathfrak{U}$ is 
 \\[
-\v{C}^n(\mathfrak{U}, f\_{\*}\F)=\prod\_{i\_0\leq i\_1\leq ...\leq i\_n}f\_{\*}\F(U\_{i\_0,i\_1,...,i\_n})
+{C}^n(\mathfrak{U}, f\_{\*}\F)=\prod\_{i\_0\leq i\_1\leq ...\leq i\_n}f\_{\*}\F(U\_{i\_0,i\_1,...,i\_n})
 \cong \prod\_{i\_0\leq i\_1\leq ...\leq i\_n}\F(f^{-}(U\_{i\_0,i\_1,...,i\_n}))
-=\v{C}^n(f^{-1}\mathfrak{U}, \F)
+={C}^n(f^{-1}\mathfrak{U}, \F)
 \\]
 Therefore, the cohomology are the same.
 
