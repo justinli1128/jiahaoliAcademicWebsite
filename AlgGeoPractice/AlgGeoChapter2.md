@@ -563,7 +563,7 @@ _proof:_
 
 Let $\F$ be a $\Oc\_X$-module.
 
-$X$ has three open set, $X$, $\emtpyset$ and $(0)$. Of course, a $\F$ is a sheaf, so $\F(\emptyset)=0$ for any $\F$.
+$X$ has three open set, $X$, $\emptyset$ and $(0)$. Of course, a $\F$ is a sheaf, so $\F(\emptyset)=0$ for any $\F$.
 
 Denote $M=\F(X)$, by definition this is a $\Oc\_X(X)=R$-module. Denote $L=\F((0))$, this is a  $\Oc\_X((0))=R_{(0)}=K$-module.
 
@@ -672,6 +672,10 @@ For any ideal $a\subseteq A$, we define a submodule $\Gamma\_a(M)$ of $M$ by
 Assume that $A$ is noetherian, and $M$ an $A$-module. Show that $\tilde{\Gamma\_a(M)} \cong \mathcal{H}^0\_Z(\F)$, where $Z=V(a)$ and $\F=\tilde{M}$. Here $\mathcal{H}^0\_Z(\F)$ is the sheaf that takes open set $U$ to $\Gamma\_{Z\cap U}(U, \F\|\_ U)$.
 
 _proof:_
+
+We see that the result would easily generalize. So just show the affine case.
+
+
 
 
 ## 2.6: Divisors
