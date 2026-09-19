@@ -673,12 +673,51 @@ Assume that $A$ is noetherian, and $M$ an $A$-module. Show that $\tilde{\Gamma\_
 
 _proof:_
 
-We see that the result would easily generalize. So just show the affine case.
+We see that the result would easily generalize, so we will just show the affine case. Morever, it suffices to show they are isomorphic on the standard opens $D(f)$. 
+
+For $f\in A$, $\mathcal{H}^0\_Z(\F)(D(f))= \Gamma\_{Z\cap D(f)}(D(f), \F\|\_ {D(f)})$. We know that $D(f)\cong \spec(A\_f)$ and $ \F\|\_ {D(f)}\cong \tilde{M\_f}$, and $Z\cap D(f)=a\subseteq A\_f$. We claim that $ \Gamma\_{Z\cap D(f)}(D(f), \F\|\_ {D(f)})\cong \Gamma\_{a}(M\_f)$. This is a special case of Ex.3.3.3 (take $i=0$, here the noetherian condition does matter).
+
+We notice that every element in $\[ \Gamma\_a(M)\]\_f$ are of the form $m/f^n$ for $m\in \Gamma\_a(M)$. Hence $\Gamma\_{a}(M\_f)\cong \[\Gamma\_a(M)\]\_f$.
+
+#### e)
+Let $X$ be a noetherian scheme, and let $Z$ be a closed subset. If $\F$ is a quasi-
+coherent (respectively, coherent) $X$-module, then $\mathcal{H}^0\_Z(\F)$ is also quasi- coherent (respectively, coherent).
+
+_proof:_
+  Over the affines, $Z$ is intersection of $V(a)$, so $\mathcal{H}^0\_Z(\F)$ is intersection of $\tilde{\Gamma\_a(M)}$ as well, this takes care of the quasicoherent. If $A$ is noetherian, every submodule of a finitely generated module is finitely generated. This takes care of coherent.
+
+### 2.5.8
+
+Again let $X$ be a noetherian scheme, and $\F$ a coherent sheaf on $X$. We will
+consider the function
+\\[
+\varphi(x) = \dim\_{\kappa(x)}(\F\_x  \otimes\_{\Oc\_{X,x}} \kappa(x))
+
+\\]
+where $\kappa(x):=\Oc\_{X,x}/m\_x$ is the residue field at the point $x$. Use Nakayama's lemma to prove the following results.
+
+#### a)
+
+The function $\varphi$ is upper semi-continuous,i.e.,for any $n \in \mathbb{Z}$, the set $S(n):=\{x\in X: \varphi(x)\geq n\}$ is closed.
+
+_proof:_
+
+Trivially, for $n\leq 0$, $S(n)$ is closed as it is just $X$.
+
+So we assume $n\geq 1$. We will show the complement $S(n)^c$, i.e.$\{x\in X: \varphi(x)< n\}$ is open. 
 
 
+
+#### b)
+If $\F$ is locally free, and $X$ is connected, then $\varphi$ is a constant function.
+
+#### c)
+
+Conversely, if $X$ is reduced, and $\varphi$ is constant, then $\F$ is locally free.
 
 
 ## 2.6: Divisors
+
 ## 2.7: Projective Morphisms
 ## 2.8: Differentials
 ## 2.9: Formal Schemes
