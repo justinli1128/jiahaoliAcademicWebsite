@@ -626,7 +626,53 @@ Let $A$ be a ring, let $M$ be an $A$-module, let $X = \spec A$, and let $\F = \t
 
 _proof:_
 
-We have that $p\in \mathrm{supp}(m)$ iff $m\neq 0\in \F\_{p}$.
+We have that by definition $p\notin \mathrm{supp}(m)$ iff $m= 0\in \F\_{p}$. 
+Since $\F\cong \tilde{M}$, then $\F\_{p}\cong M\_{p}$, and $m=0\in M\_{p}$. Therefore, for some $a\notin p$, there is $n$ such that $a^nm=0$, hence $a^n\in \mathrm{Ann}\_A(m)$. Since $p$ is prime, if $a^n\in p$, then $a\in p$, which is not the case, hence $\mathrm{Ann}\_A(m)\not \subseteq p$. Therefore, $\mathrm{supp}(m)^c\subseteq D(\mathrm{Ann}\_A(m))$, or equivalently, $V(\mathrm{Ann}\_A(m))\subseteq \mathrm{supp}(m)$.
+
+If $p\in D(\mathrm{Ann}\_A(m))$, so $\mathrm{Ann}\_A(m)\subseteq p$, as there exists $a\in \mathrm{Ann}\_A(m)$ that is not in $p$. Hence $a$ is invertible in $\F\_{p}$. Yet $a$ annihilates $m$, hence $m=0 \in \F\_{p}$. So $p \notin \mathrm{supp}(m)$. 
+
+So $\mathrm{supp}(m)=V(\mathrm{Ann}\_A(m))$
+
+#### b)
+
+Now suppose that $A$ is noetherian, and $M$ finitely generated. Show that $\mathrm{supp}(\F)=V(\mathrm{Ann}\_A(M))$ (not too sure why we need noetherian assumption)
+
+_proof:_
+
+We know that $\mathrm{supp}(\F)=\cup\_{m\in M}\mathrm{supp}(m)$. Since $M$ is finitely generated, with generator $m\_i$, we claim that $\mathrm{supp}(\F)=\cup\_{i=1}^n\mathrm{supp}(m\_i)$. Of course, if $p \in \mathrm{supp}(m\_i)$, then $m\_i\neq 0 \in M\_p$ so $M\_p\neq 0$, and if $p\in \mathrm{supp}(\F)$, then there is $m=\sum a\_i m\_i$ such that $\sum a\_i m\_i\neq 0 \in M\_p$, so $m\_i\neq 0 for some $i$.
+
+Therefore, we have 
+\\[
+\mathrm{supp}(\F)=\cup\_{i=1}^n\mathrm{supp}(m\_i)=\cup\_{i=1}^nV(\mathrm{Ann}\_A(m\_i))=V(\cap\_{i=1}^n\mathrm{Ann}\_A(m\_i))
+\\]
+
+Now, if $a\in\cap\_{i=1}^n\mathrm{Ann}\_A(m\_i)$,then $am=a(\sum a\_i m\_i)=\sum a\_i am\_i = 0$. So $a\in \mathrm{Ann}\_A(M)$. If $a\in \mathrm{Ann}\_A(M)$, then for every $i$, $am\_i=0$.
+
+We are done. 
+
+#### c)
+
+The support of a coherent sheaf on a noetherian scheme is closed.
+
+_proof:_
+
+We now that every quasicoherent module $\F$ over a noetherian scheme $X$ can be covered by some finite affine cover $U\_i=\spec(A\_i)$, where $\F\|\_{U\_i}\cong \tilde{M\_i}$ with $M\_i$ finitely generated. 
+
+We have that 
+\\[\mathrm{supp}(\F)=\cup\_{i=1}^n\mathrm{supp}(\F\|\_{U\_i})=\cup\_{i=1}^n V(\mathrm{Ann}\_{A\_i}(M\_i))
+\\]
+Which is a finite union of closed set.
+
+#### d)
+
+For any ideal $a\subseteq A$, we define a submodule $\Gamma\_a(M)$ of $M$ by 
+\\[
+\Gamma\_a(M)=\{ m\in M : a^nm=0 \text{ for some }n\}
+\\]
+Assume that $A$ is noetherian, and $M$ an $A$-module. Show that $\tilde{\Gamma\_a(M)} \cong \mathcal{H}^0\_Z(\F)$, where $Z=V(a)$ and $\F=\tilde{M}$. Here $\mathcal{H}^0\_Z(\F)$ is the sheaf that takes open set $U$ to $\Gamma\_{Z\cap U}(U, \F\|\_ U)$.
+
+_proof:_
+
 
 ## 2.6: Divisors
 ## 2.7: Projective Morphisms
