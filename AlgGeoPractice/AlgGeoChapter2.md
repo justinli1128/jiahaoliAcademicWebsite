@@ -692,7 +692,6 @@ Again let $X$ be a noetherian scheme, and $\F$ a coherent sheaf on $X$. We will
 consider the function
 \\[
 \varphi(x) = \dim\_{\kappa(x)}(\F\_x  \otimes\_{\Oc\_{X,x}} \kappa(x))
-
 \\]
 where $\kappa(x):=\Oc\_{X,x}/m\_x$ is the residue field at the point $x$. Use Nakayama's lemma to prove the following results.
 
@@ -702,18 +701,44 @@ The function $\varphi$ is upper semi-continuous,i.e.,for any $n \in \mathbb{Z}$,
 
 _proof:_
 
-Trivially, for $n\leq 0$, $S(n)$ is closed as it is just $X$.
+We assume $n\geq 1$ (the other cases are trivial). We will show the complement $S(n)^c$, i.e.$\{x\in X: \varphi(x)< n\}$ is open. Moreover, since union of opens are still open, we only need to show the statement is true for affines $X=\spec(A)$ and $\F=\tilde{M}$ for some noetherian $A$ and finitely generated $A$-module $M$.
 
-So we assume $n\geq 1$. We will show the complement $S(n)^c$, i.e.$\{x\in X: \varphi(x)< n\}$ is open. 
+Suppose we have $p\in S(n)^{c}$, so $\dim (M\_p/pM\_p)<n$. We need to find $f\in A$ such that $p\in D(f)$ and $D(f)\subseteq S(n)^{c}$.
+
+Hence, we just need $r$ elements $m\_i\in  M\_p/pM\_p$ to generate the entire vector space. We furthermore suppose that $m\_i$ exists in $M\_p$, which is possible as $M\_p\to M\_p/pM\_p$ is surjective. We have $M\_p/(m\_i)$ goes to zero after modulo $p$, therefore, by Nakayama's lemma, $M\_p/(m\_i)=0$. 
+
+Since every element in $A\_p$ is a fraction, so $m\_i$ lifts to elements in $M$, and we have that $\[M/(m\_i)\]\_p=M\_p/(m\_i)=0$. Since $M$ is finitely generated, $M/(m\_i)$ is also, with finitely many generators $n\_j$. There is then $f\_j\notin p$ such that $f\_jn\_j=0$ in $M/(m\_i)$. We define $f:=\prod\_j f\_j$, and since $p$ is prime $f\notin p$ and thus $p \in D(f)$. We will show that $D(f)\subseteq S(n)^c$.
+
+Let $x\in D(f)$ be another prime ideal.  Now we have that $fz\_j=0$, so $\[M/(m\_i)\]\_x=0$ as well. We don't know if there is $g\notin x$ such that $gm\_i=0$ for some $i$. Hence we can only conclude that $\varphi(x)<n$, but that is all we need.
 
 
 
 #### b)
 If $\F$ is locally free, and $X$ is connected, then $\varphi$ is a constant function.
 
+_proof:_
+
+Once again, since $X$ is connected and $\varphi(x)$ depends only locally, so affine is enough. We just need to show that for any prime $p\subset A$, and finitely free $A$-module $M\cong A^k$, $M\_p/pM\_p$ has the same dimension. Freeness condition tells us that all we need to show is for $M=A$, and we just need to show that $A\_p/pA\_p=\kappa(p)$ does not vanish, and it doesn't.
+
+
 #### c)
 
 Conversely, if $X$ is reduced, and $\varphi$ is constant, then $\F$ is locally free.
+
+_proof:_
+
+Once again, affine suffices. Following notation in a), suppose $\varphi(p)=r$, there is then an exact sequence 
+\\[
+A^{q}\xrightarrow{\psi} A^{r}\to M\to 0
+\\] Where the second map determines $m\_i$. 
+
+We have that for any prime ideal $x$, $\varphi(x)=r$ from the constant assumption. So we have that the localized map $\psi\_{x}\equiv 0\mod x$ (or else, $\varphi(x)\neq r$).
+
+Since $\psi$ over any local field is a linear transformation between finite dimensional vector spaces, it has matrix representation $(a\_{ij})\in A$, and we have that $a\_{ij}\equiv 0 \mod x$, for every $x$. Hence $a\_{ij}\in x$ for every prime ideal. Hence $a\_{ij}$ is in the nilpotent ideal. 
+
+Now $A$ is reduced, so the nilpotent ideal is just $0$, so $\psi=0$ over $A\$, hence $M$ is free.
+
+
 
 
 ## 2.6: Divisors
