@@ -287,7 +287,7 @@ Since $f\_i$ generate $1$, then $D(f\_i)$ covers $A\_{f\_i}$, and $\varphi^{-1}(
 ($\impliedby$) Ah Doiii
 ($\implies$) Let $U\_i$ be an affine cover of $Y$ such that $f^{-1}(U\_i)$ are covered by affine $V\_{ij}$ that are finite.
 
-For any affine open $U$ in $Y$, $U$ is covered by standard opens $D(r\_{ik})$ for $r\_{ik}\in \Gamma(U\_i)$. Since $U$ is quasicompact, we can choose finitely many $r\_{ik}$. So we have that $r\_{ik}\in \Gamma(U)$ generate $1$, and hence $f^{\sharp}(r\_{ik})$ generate $1$ in $\Gamma(f^{-1}(U))$. [Ex.2.2.17](#2217) then tells us that $f^{-1}(U)$ is affine. 
+For any affine open $U$ in $Y$, $U$ is covered by standard opens $D(r\_{ik})$ for $r\_{ik}\in \Gamma(U\_i)$. Since $U$ is quasicompact, we can choose finitely many $r\_{ik}$. So we have that $r\_{ik}\in \Gamma(U)$ generate $1$, and hence $f^{\sharp}(r\_{ik})$ generate $1$ in $\Gamma(f^{-1}(U))$. [Ex.2.2.17](#2217-criterion-for-affineness) then tells us that $f^{-1}(U)$ is affine. 
 
 Since $V\_{ij}$ covers $f^{-1}(U)$ and all of them are finite algebra, then so is $\Gamma(f^{-1}(U))$.
 
@@ -764,7 +764,7 @@ Suppose $U$ is an affine open of $Y$ such that $f^{-1}(U)$ is affine. We have th
 
 Given affine open $V$ of $Y$, we look at its intersections $V\_i\cap V$. Since $V$ is affine, it is quasicompact, and hence there exists finitely standard opens $D(r\_{ij})$ for each $i$ that covers $V$. 
 
-Therefore, by [Ex.2.2.17](#2217), $r\_{ij}\in \Gamma(V)$ generates $1$, so $f^{\sharp}(r\_ij)\in \Gamma(f^{-1}(V))$ generate $1$ as well, and $f^{-1}(D(r\_{ij})$ are affines, so $f^{-1}(V)$ is affine.
+Therefore, by [Ex.2.2.17](##2217-criterion-for-affineness), $r\_{ij}\in \Gamma(V)$ generates $1$, so $f^{\sharp}(r\_ij)\in \Gamma(f^{-1}(V))$ generate $1$ as well, and $f^{-1}(D(r\_{ij})$ are affines, so $f^{-1}(V)$ is affine.
 
 
 
@@ -781,7 +781,7 @@ _proof:_
 
 #### c)
 Let $Y$ be a scheme, and let $\F$ be a quasi-coherent sheaf of $\Oc\_Y$-algebras (i.e., a
-sheaf of rings which is at the same time a quasi-coherent sheaf of $\Oc\_Y$-modules). Show that there is a unique scheme $X$, and a morphism $f:X \to Y$, such that for every open affine $V\subseteq Y$, $f^{-1}(V)\cong \spec(\F(V))$, and for every inclusion $U\subseteq V$ of open affines of $Y$, the morphism $f^{-1}(U)\to f^{-1}(V)$ corresponds to the restriction homomorphism $\F(V)\to \F(U). The scheme $X$ is called $\spec(\F)$.
+sheaf of rings which is at the same time a quasi-coherent sheaf of $\Oc\_Y$-modules). Show that there is a unique scheme $X$, and a morphism $f:X \to Y$, such that for every open affine $V\subseteq Y$, $f^{-1}(V)\cong \spec(\F(V))$, and for every inclusion $U\subseteq V$ of open affines of $Y$, the morphism $f^{-1}(U)\to f^{-1}(V)$ corresponds to the restriction homomorphism $\F(V)\to \F(U)$. The scheme $X$ is called $\spec(\F)$.
 
 _proof:_
 
