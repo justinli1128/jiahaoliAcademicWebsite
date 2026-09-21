@@ -278,6 +278,19 @@ Since $f\_i$ generate $1$, then $D(f\_i)$ covers $A\_{f\_i}$, and $\varphi^{-1}(
 
 ## 2.3: First Properties of Schemes
 
+### 2.3.4
+
+ Show that a morphism $f:X\to Y$ is finite if and only if for every open affine subset $V = \spec B$ of $Y$, $f^{-1}(V)$ is affine, equal to $\spec(A)$, where $A$ is a finite $B$-module.
+
+ _proof:_
+
+($\impliedby$) Ah Doiii
+($\implies$) Let $U\_i$ be an affine cover of $Y$ such that $f^{-1}(U\_i)$ are covered by affine $V\_{ij}$ that are finite.
+
+For any affine open $U$ in $Y$, $U$ is covered by standard opens $D(r\_{ik})$ for $r\_{ik}\in \Gamma(U\_i)$. Since $U$ is quasicompact, we can choose finitely many $r\_{ik}$. So we have that $r\_{ik}\in \Gamma(U)$ generate $1$, and hence $f^{\sharp}(r\_{ik})$ generate $1$ in $\Gamma(f^{-1}(U))$. [Ex.2.2.17](#2217) then tells us that $f^{-1}(U)$ is affine. 
+
+Since $V\_{ij}$ covers $f^{-1}(U)$ and all of them are finite algebra, then so is $\Gamma(f^{-1}(U))$.
+
 ### 2.3.6
 
 Let $X$ be an integral scheme. Show that the local ring $\Oc\_{\xi}$ of the generic point $\xi$ of $X$ is a field. It is called the function field of $X$ and is denoted by $K(X)$. Show also that if $U = \spec (A)$ is any open affine subset of $X$, then $K(X) $is isomorphic to the quotient field of $A$. 
@@ -435,13 +448,11 @@ We just need to show this on affine open, for which the pullback is $\spec(B\oti
 
 Show that finite morphism are proper.
 
-_proof:_
-
-We know that by Ex.3.4, a finite morphism $f: X\to Y$, for every affine $U$, $f^{-1}(U)$ is affine. 
+_proof:_ 
 
 Let $R\to k$ be a valuative ring and its quotient field. There are two point $m, (0)\in \spec(R)$, $m$ for the closed point and $(0)$ for the generic point. If we have $g:\spec(R)\to X$, any open $U$ containing $g(m)$ would must contain $g((0))$, since $g^{-1}(U)$ is open and the smallest open in $\spec(R)$ containing $m$ is itself. 
 
-So we can work completely in affine case. 
+Since $f$ is finite, [Ex. 2.3.4](#234) shows that $f^{-1}(U)$ for any affine $U$ is affine. So we can work completely in affine case. 
 
 We want to use Theorem 4.7 for properness, in affine case is equivalent to given $f:A\to B$, $i:R\to k$, $\varphi:A\to R$, and $\psi: B\to k$, there is an unique $\phi: B\to R$. 
 
@@ -491,7 +502,7 @@ Suppose $S=\spec(A)$, $U=\spec(B)$ and $V=\spec(C)$.
    
 The diagonal $\Delta: X\to X\times\_S X$ is closed, and we have map $U\times\_S V\cong \spec(B\otimes\_A C)\to  X\times\_S X$
 
-The preimage $\Delta^{-1}(U\times\_S V)$ on $X$ is precisely $U\cap V$. Recall that closed immersion are affine (Ex. 3.11b)) so $U\cap V$ is affine.
+The preimage $\Delta^{-1}(U\times\_S V)$ on $X$ is precisely $U\cap V$. Recall that closed immersion are affine ([Ex. 3.11b)](#2311)) so $U\cap V$ is affine.
 
 _counterexample:_
 
@@ -675,7 +686,7 @@ _proof:_
 
 We see that the result would easily generalize, so we will just show the affine case. Morever, it suffices to show they are isomorphic on the standard opens $D(f)$. 
 
-For $f\in A$, $\mathcal{H}^0\_Z(\F)(D(f))= \Gamma\_{Z\cap D(f)}(D(f), \F\|\_ {D(f)})$. We know that $D(f)\cong \spec(A\_f)$ and $ \F\|\_ {D(f)}\cong \tilde{M\_f}$, and $Z\cap D(f)=a\subseteq A\_f$. We claim that $ \Gamma\_{Z\cap D(f)}(D(f), \F\|\_ {D(f)})\cong \Gamma\_{a}(M\_f)$. This is a special case of Ex.3.3.3 (take $i=0$, here the noetherian condition does matter).
+For $f\in A$, $\mathcal{H}^0\_Z(\F)(D(f))= \Gamma\_{Z\cap D(f)}(D(f), \F\|\_ {D(f)})$. We know that $D(f)\cong \spec(A\_f)$ and $ \F\|\_ {D(f)}\cong \tilde{M\_f}$, and $Z\cap D(f)=a\subseteq A\_f$. We claim that $ \Gamma\_{Z\cap D(f)}(D(f), \F\|\_ {D(f)})\cong \Gamma\_{a}(M\_f)$. This is a special case of [Ex.3.3.3](AlgGeoChapter3.md/#333) (take $i=0$, here the noetherian condition does matter).
 
 We notice that every element in $\[ \Gamma\_a(M)\]\_f$ are of the form $m/f^n$ for $m\in \Gamma\_a(M)$. Hence $\Gamma\_{a}(M\_f)\cong \[\Gamma\_a(M)\]\_f$.
 
@@ -738,7 +749,60 @@ Since $\psi$ over any local field is a linear transformation between finite dime
 
 Now $A$ is reduced, so the nilpotent ideal is just $0$, so $\psi=0$ over $A\$, hence $M$ is free.
 
+### 3.5.17 Affine Morphisms
+ A morphism of scheme $f:X\to Y$ is affine if there is an affine cover $V\_i$ of $Y$ such that $f^{-1}(V\_i)$ are affinte as well.
 
+#### a)
+Show that $f: X \to Y$ is an affine morphism if and only if for every open affine $V$, $f^{-1}(V)$ is affine.
+
+_proof:_
+
+($\impliedby$) Ah Doiii
+($\implies$) Let $V\_i$ be the affine cover of $Y$ such that $f^{-1}(V\_i)$ are affines. Suppose $V$ is an affine subscheme of $Y$, we want to show that $f^{-1}(V)$ is affine. 
+ 
+Suppose $U$ is an affine open of $Y$ such that $f^{-1}(U)$ is affine. We have that all opens of the form $D(r)$ in $U$ have preimage $f^{-1}(D(r))=D(f^{\sharp}(r))$. 
+
+Given affine open $V$ of $Y$, we look at its intersections $V\_i\cap V$. Since $V$ is affine, it is quasicompact, and hence there exists finitely standard opens $D(r\_{ij})$ for each $i$ that covers $V$. 
+
+Therefore, by [Ex.2.2.17](#2217), $r\_{ij}\in \Gamma(V)$ generates $1$, so $f^{\sharp}(r\_ij)\in \Gamma(f^{-1}(V))$ generate $1$ as well, and $f^{-1}(D(r\_{ij})$ are affines, so $f^{-1}(V)$ is affine.
+
+
+
+#### b)
+
+An affine morphism is quasi-compact and separated. Any finite morphism is
+affine.
+
+_proof:_
+
+1) since affines are quasicompact, the quasicompactness follows. Affineness of $f$ implies that a morphism $\spec(k)\to \spec(R)$ of valuative ring in $f: X\to Y$ is reduced to a morphism of affines $\spec(A)\to \spec(B)$. So we are trying to find a lift $A\to R$, which exists iff $A\to k$ lies in $R$, and is unique.
+
+2) [Ex. 2.3.4](#234)
+
+#### c)
+Let $Y$ be a scheme, and let $\F$ be a quasi-coherent sheaf of $\Oc\_Y$-algebras (i.e., a
+sheaf of rings which is at the same time a quasi-coherent sheaf of $\Oc\_Y$-modules). Show that there is a unique scheme $X$, and a morphism $f:X \to Y$, such that for every open affine $V\subseteq Y$, $f^{-1}(V)\cong \spec(\F(V))$, and for every inclusion $U\subseteq V$ of open affines of $Y$, the morphism $f^{-1}(U)\to f^{-1}(V)$ corresponds to the restriction homomorphism $\F(V)\to \F(U). The scheme $X$ is called $\spec(\F)$.
+
+_proof:_
+
+For $Y=\spec(A)$ affine and $\F\cong \tilde{B}$ for some $A$-algebra, we define $X=\spec(B)$. We see that the localization on standard open $D(r)$ for $r\in A$ of $\F$ is $B\_r$, which is precisely $X\_{r}$.
+
+For a general $Y$, we choose an affine cover $U\_i$ of $Y$ and $\F\|\_{U\_i}\cong \tilde{B\_i}$, and we construct $X\_i:=\spec(B\_i)$. Since restriction of $\F$ are well-defined and compatible with $X\_i$ and their intersections, we have $X:=\cup\_i X\_i$.
+
+#### d)
+
+If $\F$ is a quasi-coherent $Y$-algebra, then $f: X=\spec\F \to Y$ is an affine morphism, and $\F\cong f\_* \Oc\_X$· Conversely, if $f:X\to Y$ is an affine morphism, then $\F:=f\_*\Oc\_X$ is a quasi-coherent sheaf of $Y$-algebras, and $X=\spec(\F)$ .
+
+_proof:_
+
+($\implies$)
+Affineness is by our construction in c). Moreover, we have that $f\_* \Oc\_X(U)=\Oc\_X(f^{-1}(U))=\F(U)$ for standard open $U$, hence all opens.
+
+($\impliedby$)
+
+Let $U\_i=\spec(A\_i)$ be an affine cover. Then $V\_i=f^{-1}(U\_i)=\spec(B\_i)$ are also affine.
+
+We have that $f\_{\*}\Oc\_X\|\_{U\_i}\cong \tilde{B\_i}$ by comparing them on the standard opens, so $f\_{\*}\Oc\_{X}$ is a quasicoherent $Y$-module that is also an algebra. Lastly, $X=\spec(f\_{\*}\Oc\_X)$.
 
 
 ## 2.6: Divisors
