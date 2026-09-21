@@ -749,7 +749,7 @@ Since $\psi$ over any local field is a linear transformation between finite dime
 
 Now $A$ is reduced, so the nilpotent ideal is just $0$, so $\psi=0$ over $A\$, hence $M$ is free.
 
-### 3.5.17 Affine Morphisms
+### 2.5.17 Affine Morphisms
  A morphism of scheme $f:X\to Y$ is affine if there is an affine cover $V\_i$ of $Y$ such that $f^{-1}(V\_i)$ are affinte as well.
 
 #### a)
@@ -764,7 +764,7 @@ Suppose $U$ is an affine open of $Y$ such that $f^{-1}(U)$ is affine. We have th
 
 Given affine open $V$ of $Y$, we look at its intersections $V\_i\cap V$. Since $V$ is affine, it is quasicompact, and hence there exists finitely standard opens $D(r\_{ij})$ for each $i$ that covers $V$. 
 
-Therefore, by [Ex.2.2.17](##2217-criterion-for-affineness), $r\_{ij}\in \Gamma(V)$ generates $1$, so $f^{\sharp}(r\_ij)\in \Gamma(f^{-1}(V))$ generate $1$ as well, and $f^{-1}(D(r\_{ij})$ are affines, so $f^{-1}(V)$ is affine.
+Therefore, by [Ex.2.2.17](#2217-criterion-for-affineness), $r\_{ij}\in \Gamma(V)$ generates $1$, so $f^{\sharp}(r\_ij)\in \Gamma(f^{-1}(V))$ generate $1$ as well, and $f^{-1}(D(r\_{ij})$ are affines, so $f^{-1}(V)$ is affine.
 
 
 
