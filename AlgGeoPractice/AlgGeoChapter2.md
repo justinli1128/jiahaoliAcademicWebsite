@@ -827,6 +827,25 @@ Let $\eta\_i$ be the generic point of $Y\_i$, which determines the valuation $v\
 
 #### b)
 
+If $D$ is a principal divisor on $\Proj^n\_k$, for which $D.X$ is defined as in (a), show that $D.X$ is principal on $X$. Thus we get a homomorphism $\mathrm{Cl}\Proj\_k^n \to \mathrm{Cl} X$
+
+_proof:_
+
+Let $D$ be principal, hence there is rational $f\in K(\Proj^n\_k)$, such that 
+\\[
+D=(f)=\sum\_Y v\_Y(f) Y
+\\]
+
+Let $f\_X$ be $f$ restricted to $X$, we will show that $D.X=(f\_X)$.
+
+Let $Y\_i$ be one of the irreducible component of $Y\cap X$. Obviously $f(Y\_i)=0$. On the other hand, if we have a prime divisor in $(f\_X)$, say $V$. We first note that $f=F/G$ for $F$ and $G$ homogeneous and of the same degee, so if $V\subset X\subset \Proj^n\_k$ are zeros of $f$, hence of $F$. It must be part of the prime divisor $W$ of $\Proj^n\_k$ such that $F(W)=0$ and $V= X\cap W$. 
+
+Now move on to the coefficients. Since $Y$ and $Y\cap X$ are determined by the same generic point $\eta\_Y$, just in different scheme, the valuation on $\Proj\_k^n$ would be the same after restriction to $X$. 
+
+Suppose we have a prime divisor $V$ of $\Proj\_k^n$ that contain all of $X$, we define its value on the divisor group to be $0$. Now if we have some other $V'$ such that $V~V'$, then there is $f$ such that $V'=V+(f)$, but both term in rhs are zero. 
+
+So we have a group homomorphism $\mathrm{Cl}\Proj\_k^n \to \mathrm{Cl} X$
+
 ## 2.7: Projective Morphisms
 ## 2.8: Differentials
 ## 2.9: Formal Schemes
