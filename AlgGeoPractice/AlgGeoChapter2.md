@@ -813,7 +813,7 @@ We have that $f\_{\*}\Oc\_X\|\_{U\_i}\cong \tilde{B\_i}$ by comparing them on th
 
  Let $k$ be an algebraically closed field, and let $X$ be a closed subvariety of $\Proj\_k^n$ which is nonsingular in codimension one (hence satisfies(*)). For any divisor $D = \sum n\_i Y\_i$ on X, we define the degree of $D$ to be $\sum n\_i \mathrm{deg}(Y\_i)$, where \mathrm{deg}(Y\_i); is the degree of $Y\_i$;, considered as a projective variety itself.
 
- #### a)
+#### a)
 
   Let $V$ be an irreducible hypersurface in $\Proj\_k^n$ which does not contain $X$, and let $Y\_i$ be the irreducible components of $V \cap X$. They all have codimension $1$ in $X$. For each $i$, let $f\_i$ be a local equation for $V$ on some open set $U\_i$ of $\Proj\_k^n$ for which $Y\_i \cap U\_i \neq \emptyset$, and let $n\_i = v\_{Y\_i} (\overline{f}\_i)$, where $\overline{f}\_i$ is the restriction of $f\_i$ to $U\_i \cap X$. Then we define the divisor $V.X$ to be $\sum v_{Y\_i}(\overline{f}\_i)Y\_i$. Extend by linearity, and show that this gives a well-defined homomorphism from the subgroup of $\mathbf{Div} \Proj\_k^n$ consisting of divisors, none of whose components contain $X$, to $\mathbf{Div} X$.
 
