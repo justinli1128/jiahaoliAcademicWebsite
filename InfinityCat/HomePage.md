@@ -136,7 +136,7 @@ _proof:_
 
 Define $f:\pi\_0^\Delta(X)\cong \pi\_0(\|X\|)$ from $x\in X\_0$ to $(x,*)\in \|X\|$. 
 
-Since if $x~ y$ in $X\_0$, then there is a $\Delta[1]\to X$ connecting $x$ to $y$, so realization of $x$ and $y$ lies on the same connected component, so this is well defined.
+Since if $x~ y$ in $X\_0$, then there is a $\Delta\[1\]\to X$ connecting $x$ to $y$, so realization of $x$ and $y$ lies on the same connected component, so this is well defined.
 
 We have that for every connected component of $\|X\|$, there is at least one $x\in X\_0$, so $f$ is surjective.
 
@@ -145,14 +145,15 @@ If we have $(x,*)$ and $(y,*)$ lying on the same connected component. Then there
 ### Exercise 15
 Show there is pushout diagram
 \\[
-\coprod\_{J\_n}\partial \Delta[n]& \longrightarrow & \mathrm{sk}\_{n-1}(X)
+\coprod\_{J\_n}\partial \Delta\[n\]& \longrightarrow & \mathrm{sk}\_{n-1}(X)
 \\]
 \\[
 \downarrow && \downarrow\\
 \\]
 \\[
-\coprod\_{J\_n}\partial \Delta[n] & \longrightarrow & \mathrm{sk}\_{n}(X)
-\\]Where $J\_n$ are the nondegenerate $n$-simplices. Moreover, $\mathrm{colim}\_n\mathrm{sk}\_n(X)\cong X$.
+\coprod\_{J\_n}\partial \Delta\[n\] & \longrightarrow & \mathrm{sk}\_{n}(X)
+\\]
+Where $J\_n$ are the nondegenerate $n$-simplices. Moreover, $\mathrm{colim}\_n\mathrm{sk}\_n(X)\cong X$.
  
  
  
