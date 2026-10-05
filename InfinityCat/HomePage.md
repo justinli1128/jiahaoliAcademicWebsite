@@ -10,7 +10,7 @@ title: Practices in of _Introduction to Infinity-Categories_ by M. Land (Updatin
 
 Let $h(CW)$ be the homotopy category of CW-complexes. Show that this category does not have all pushouts. More concretely, show that the diagram
 \\[
-*\xleftarrow S^1\xrightarrow{\times 2} S^1
+*\xleftarrow{} S^1\xrightarrow{\times 2} S^1
 \\]
 does not admit a pushout (great example).
 
@@ -18,7 +18,7 @@ _proof:_
 
 In point set $CW$, the pushout is just $*$, as $\times 2$ is surjective. However, the diagram is also equivalent to
 \\[
-D^1\xleftarrow S^1\xrightarrow{\times 2} S^1
+D^1\xleftarrow{} S^1\xrightarrow{\times 2} S^1
 \\] 
 With pushout in point set $\mathbb{R}P^2$.
 
