@@ -45,7 +45,7 @@ _proof:_
 
 The scheme $T\times\_S T$ is just $\spec(L\otimes \_k L)$, we have that $L\otimes\_k L\cong \prod\_{g\in G}L$. Hence the irreducible components are determined by $L$ labeled by $g\in G$. This shows the first part.
 
-$T \to S \to T$ is the entire $T\times T$, which has $|G|$ many irreducible components, hence the pushforward onto $T\times T$ is $\sum\_{g\in G}(g)$.
+$T \to S \to T$ is the entire $T\times T$, which has $\|G\|$ many irreducible components, hence the pushforward onto $T\times T$ is $\sum\_{g\in G}(g)$.
 
 We have the map $f:Cor\_k(S,Y)\to Cor\_k(T,Y)$ determined by precomposition with $T\to S$. We see that for any $g\in G$, the correspondence $T\xrightarrow{g} T\to S$ is determined by the graph of the underlying morphism, which is the same for any $g$. Hence the image of $f$ is a subgroup of the $G$-invariant $Cor\_k(T,Y)$. 
 
