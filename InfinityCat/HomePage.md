@@ -74,7 +74,8 @@ Show that the datum of an adjunction in the sense of Definition 1.1.17(natural i
 \\[
 F\xrightarrow{F\eta } FGF\xrightarrow{\epsilon F} F
 \\]
-\\]
+
+\\[
 G\xrightarrow{\eta G} GFG\xrightarrow{G\epsilon } G
 \\] are the identities
 
@@ -103,8 +104,9 @@ Therefore, we have the identity of $F$ and $G$ resp. determines natural transfor
  \Hom(F(-), F(-))\xrightarrow{F\alpha\_{GF}} \Hom(F(-),FGF(-))\xrightarrow{\epsilon F\_{\*}} \Hom(F(-), F(-))
  \\] 
  Takes $id:F(X)\to F(X)$ to $\epsilon F\circ F\eta=\epsilon F\circ \alpha\_{GF}(id\_{Fx})=\alpha_{GF}^{-1}(\alpha\_{GF}(id\_{Fx}))=id\_{Fx}$ 
+
  
- #### Exercise 10
+### Exercise 10
  
  Show that $F:C\to D$ admits a right adjoint iff there is $G: D\to C$ such that for each $y\in D$, we have a morphism $\epsilon\_y: FGy\to y$ such that for any $x\in C$, there is a bijection
  \\[
@@ -140,19 +142,19 @@ Since if $x~ y$ in $X\_0$, then there is a $\Delta\[1\]\to X$ connecting $x$ to 
 
 We have that for every connected component of $\|X\|$, there is at least one $x\in X\_0$, so $f$ is surjective.
 
-If we have $(x,\*)$ and $(y,\*)$ lying on the same connected component. Then there exists a zigzag of $\Delta\[1\]$ connecting them in $X$, so $x~y$.
+If we have $(x,\*)$ and $(y,\*)$ lying on the same connected component. Then there exists a zigzag of $\Delta\[1\]$ connecting them in $X$, so $x\~y$.
 
 ### Exercise 15
 Show there is pushout diagram
-\begin{array}{ccc}
+\begin{array}
 \coprod\_{J\_n}\partial \Delta\[n\]& \longrightarrow & \mathrm{sk}\_{n-1}(X)
-\end{array}{ccc}
-\begin{array}{ccc}
+\end{array}
+\begin{array}
 \downarrow && \downarrow
-\end{array}{ccc}
-\begin{array}{ccc}
+\end{array}
+\begin{array}
 \coprod\_{J\_n}\partial \Delta\[n\] & \longrightarrow & \mathrm{sk}\_{n}(X)
-\end{array}{ccc}
+\end{array}
 Where $J\_n$ are the nondegenerate $n$-simplices. Moreover, $\mathrm{colim}\_n\mathrm{sk}\_n(X)\cong X$.
  
  
