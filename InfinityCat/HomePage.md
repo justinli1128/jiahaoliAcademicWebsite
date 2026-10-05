@@ -144,13 +144,15 @@ If we have $(x,*)$ and $(y,*)$ lying on the same connected component. Then there
 
 ### Exercise 15
 Show there is pushout diagram
-\[
-\begin{array}{ccc}
-\coprod\_{J\_n}\partial \Delta[n]& \longrightarrow & \mathrm{sk}\_{n-1}(X)\\
+\\[
+\coprod\_{J\_n}\partial \Delta[n]& \longrightarrow & \mathrm{sk}\_{n-1}(X)
+\\]
+\\[
 \downarrow && \downarrow\\
+\\]
+\\[
 \coprod\_{J\_n}\partial \Delta[n] & \longrightarrow & \mathrm{sk}\_{n}(X)
-\end{array}
-\]Where $J\_n$ are the nondegenerate $n$-simplices. Moreover, $\mathrm{colim}\_n\mathrm{sk}\_n(X)\cong X$.
+\\]Where $J\_n$ are the nondegenerate $n$-simplices. Moreover, $\mathrm{colim}\_n\mathrm{sk}\_n(X)\cong X$.
  
  
  
