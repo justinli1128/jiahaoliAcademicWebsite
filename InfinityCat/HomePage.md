@@ -134,13 +134,13 @@ Show that for every simplicial set $X$, there is a canonical bijection $\pi\_0^\
 
 _proof:_
 
-Define $f:\pi\_0^\Delta(X)\cong \pi\_0(\|X\|)$ from $x\in X\_0$ to $(x,*)\in \|X\|$. 
+Define $f:\pi\_0^\Delta(X)\cong \pi\_0(\|X\|)$ from $x\in X\_0$ to $(x,\*)\in \|X\|$. 
 
 Since if $x~ y$ in $X\_0$, then there is a $\Delta\[1\]\to X$ connecting $x$ to $y$, so realization of $x$ and $y$ lies on the same connected component, so this is well defined.
 
 We have that for every connected component of $\|X\|$, there is at least one $x\in X\_0$, so $f$ is surjective.
 
-If we have $(x,*)$ and $(y,*)$ lying on the same connected component. Then there exists a zigzag of $\Delta[1]$ connecting them in $X$, so $x~y$.
+If we have $(x,\*)$ and $(y,\*)$ lying on the same connected component. Then there exists a zigzag of $\Delta\[1\]$ connecting them in $X$, so $x~y$.
 
 ### Exercise 15
 Show there is pushout diagram
