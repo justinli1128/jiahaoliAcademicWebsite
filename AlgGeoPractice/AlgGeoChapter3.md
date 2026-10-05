@@ -448,11 +448,23 @@ The Cech cochain of $f\_{\*}$ over $\mathfrak{U}$ is
 \\]
 Therefore, the cohomology are the same.
 
-### 3.4.2
+### 3.4.3
 
-Prove Chevalley's theorem: Let $f : X \to Y $ be a finite surjective morphism of noetherian separated schemes, with $X$ affine. Then $Y$ is affine
+Let $X =\A^{2}\_k = \spec( k\[x,y\])$, and let $U = X - (0,0)$. Using a suitable cover of $U$ by open affine subsets, show that $H^1(U, \Oc\_U)$ is isomorphic to the $k$-vector space spanned by $x^iy^j$, $i, j<0$. 
 
-#### a)
+_proof:_
+
+There are $U\_0:=D(x)=\spec(k\[x^{\pm}, y\])$ and $U\_1:=D(y)=\spec(k\[x, y^{\pm}\])$, which forms an open affine cover $\mathfrak{U}$ of $U$. Then we have
+\\[
+d_1:C^0(\mathfrak{U}, \Oc\_U)=k\[x^{\pm}, y\]\times k\[x, y^{\pm}\]\to C^1(\mathfrak{U}, \Oc\_U)=k\[x^{\pm}, y^{\pm}\]
+\\] $d_1(a, b)=a-b$, and $C^2=0$, 
+
+Define linear transformation, $f:k\[x^{\pm}, y^{\pm}\]\to k(x^iy^j \| i, j<0)$, such that $f(x^iy^j)=0$ if $i$ or $j\geq 0$.
+
+This is obviously a surjection. The kernel is the spanned by $x^iy^j$ for $i$ or $j\geq 0$.
+
+Suppose, $i\geq 0$, then $x^iy^j \in k\[x, y^{\pm}\]$, hence lies in the image of $d\_1$, similarly for $j\geq 0$. On the other hand, image of $d_1$ is spanned by $x^iy^j$, and we are done
+
 
 ## 3.5: The Cohomology of Projective Space
 ## 3.6: Ext Groups and Sheaves
