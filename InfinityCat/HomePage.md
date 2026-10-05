@@ -32,11 +32,11 @@ Let $f:\[n\]\to \[m\]$ be a map of ordered set. We have that the map factors thr
 
 #### Exercise 4
 
- Give examples of simplicial sets where the relation of Definition 1.1.9 (i.e. $x ~ y \in X_0$ if there is $H\in X_1$ such that $d_0(H)=x$ and $d_1(H)=y$), leading to $\pi\_0^\Delta (X)$, is not symmetric and not transitive.
+ Give examples of simplicial sets where the relation of Definition 1.1.9 (i.e. $x \sim y \in X_0$ if there is $H\in X_1$ such that $d_0(H)=x$ and $d_1(H)=y$), leading to $\pi\_0^\Delta (X)$, is not symmetric and not transitive.
 
  _proof:_
 
-Let $X=\Lambda^2\_1$. $0~1$ but there is no $1$-simplice such that $1~0$, so not symmetric. $0~ 1$ and $1~2$, but there is no $1$ -simplice such that $0~2$, so not transitive. 
+Let $X=\Lambda^2\_1$. $0\sim 1$ but there is no $1$-simplice such that $1\sim 0$, so not symmetric. $0\sim 1$ and $1\sim 2$, but there is no $1$ -simplice such that $0\sim 2$, so not transitive. 
 
 #### Exercise 5
 
@@ -138,21 +138,21 @@ _proof:_
 
 Define $f:\pi\_0^\Delta(X)\cong \pi\_0(\|X\|)$ from $x\in X\_0$ to $(x,\*)\in \|X\|$. 
 
-Since if $x~ y$ in $X\_0$, then there is a $\Delta\[1\]\to X$ connecting $x$ to $y$, so realization of $x$ and $y$ lies on the same connected component, so this is well defined.
+Since if $x\sim y$ in $X\_0$, then there is a $\Delta\[1\]\to X$ connecting $x$ to $y$, so realization of $x$ and $y$ lies on the same connected component, so this is well defined.
 
 We have that for every connected component of $\|X\|$, there is at least one $x\in X\_0$, so $f$ is surjective.
 
-If we have $(x,\*)$ and $(y,\*)$ lying on the same connected component. Then there exists a zigzag of $\Delta\[1\]$ connecting them in $X$, so $x\~y$.
+If we have $(x,\*)$ and $(y,\*)$ lying on the same connected component. Then there exists a zigzag of $\Delta\[1\]$ connecting them in $X$, so $x\sim y$.
 
 ### Exercise 15
 Show there is pushout diagram
-\begin{array}
+\begin{array}{ccc}
 \coprod\_{J\_n}\partial \Delta\[n\]& \longrightarrow & \mathrm{sk}\_{n-1}(X)
 \end{array}
-\begin{array}
+\begin{array}{ccc}
 \downarrow && \downarrow
 \end{array}
-\begin{array}
+\begin{array}{ccc}
 \coprod\_{J\_n}\partial \Delta\[n\] & \longrightarrow & \mathrm{sk}\_{n}(X)
 \end{array}
 Where $J\_n$ are the nondegenerate $n$-simplices. Moreover, $\mathrm{colim}\_n\mathrm{sk}\_n(X)\cong X$.
