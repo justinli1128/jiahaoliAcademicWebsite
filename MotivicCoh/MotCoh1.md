@@ -10,6 +10,30 @@ title: Practices in of Part 1 of _Lecture Notes on Motivic Cohomology_ by C. Maz
 
 ## Lecture 1
 
+### Notes
+
+Some notes on the correspondences:
+
+Fix a base scheme $S=\spec (k)$, an elementary correspondence from $X$ to $Y$ over $S$, for smooth separated connected $S$-schemes $X$ and $Y$, is a closed integral subscheme of $X\times \_S Y$ that is finite and surjective over $X$. A correspondence is a finite integral linear combination of elementary correspondences (for unconnected ones, we take the linear combination over each irreducible component).
+
+Given morphism $f:X\to Y$ over $S$, define $\Gamma\_f$ the graph, the pullback of $f\times id: X\times\_S Y\to Y\times\_S Y$ along the relative diagonal $\Delta\_{Y/S}$. Since $Y$ is $S$-separated, $\Gamma\_f$ is a closed immersion. There is isomorphism $X\to \Gamma\_f$ determine by the projection. So it is integral, finite and surjective over $X$.  
+
+Given two closed subschemes $W, V\subseteq X$, we define the intersection product
+\\[
+W\cdot V:=\sum\_{i}i(Z\_i, W, V)Z\_i
+\\] for each irreducible component of $W\cap V$, here $i(Z\_i, W, V)$ is the intersection multiplicity at $Z\_i$.
+
+For $W$ and $V$ elementary correspondence from $X$ to $Y$, we have that $W\cap V$ is proper, so the multiplicity is computed as $length\_{\Oc\_{X,\eta\_i}}(\Oc\_{X,\eta\_i}/(I\_{W,\eta\_i}+I\_{V,\eta\_i}))$.
+
+Let $f:X\to Y$ be a morphism, let $W$ be an closed irreducible set that is finite along $p$, then $V:=f(W)$ is closed and irreducible, and $\[K(W):K(V)\]=d$ is finite. The pushforward of $W$ is then $d\cdot V$.
+
+Suppose we have elementary correspondence $W:X\to Y$ and $V:Y\to Z$, we define the composition, $V\circ W$ as follow: we first look at $(X\times V)\cdot (W\times Z)$, and we pushforward the combination to $X\times Z$ along projection of $X\times Y\times Z\to X\times Z$.
+
+Let $f:X\to Y$ and $g: Y\to Z$ are morphisms between connected smooth separated schemes, the intersection product of the graphs $(X\times \Gamma\_g)\cdot (\Gamma\_f\times Z)$ is a multiple of the irreducible sets, $(x, f(x), g\circ f(x))$. Using Lemma 42.62.5 of Stack Project, we see that the intersection product is just $(X\times \Gamma\_g)\cap (\Gamma\_f\times Z)$. Since the projection onto $X\times Z$ is just $\Gamma\_{g\circ f}\cong X$, and $(X\times \Gamma\_g)\cap (\Gamma\_f\times Z)\cong X$, so the multiplicity is just $1$. Hence
+\\[
+\Gamma\_g\circ \Gamma\_f=\Gamma\_{g\circ f}
+\\]
+
 ### Exercise 1.10
 If $S = \spec k$ then $Cor\_k(S,X)$ is the group of zero-cycles in $X$. If $W$ is a finite correspondence from $\A^1$ to $X$, and $s,t : \spec(k) \to \A^1$ are $k$-points, show that the zero-cycles $W \circ \Gamma\_s$ and $W \circ \Gamma\_t$ are rationally equivalent.
 
@@ -50,4 +74,9 @@ $T \to S \to T$ is the entire $T\times T$, which has $\|G\|$ many irreducible co
 We have the map $f:Cor\_k(S,Y)\to Cor\_k(T,Y)$ determined by precomposition with $T\to S$. We see that for any $g\in G$, the correspondence $T\xrightarrow{g} T\to S$ is determined by the graph of the underlying morphism, which is the same for any $g$. Hence the image of $f$ is a subgroup of the $G$-invariant $Cor\_k(T,Y)$. 
 
 Suppose $T\to Y$ is $G$-invariant, then $T\to Y$ and $T\to S\to T \to Y$ are the same, as $T\to S\to T$ is $\sum\_{g\in G} (g)$. Therefore, $T\to Y$ lies in the image of $T\to S$. 
+
+### Exercise 1.12
+If $k \subset F$ is a field extension, there is an additive functor $Cor\_k \to Cor\_F$ sending $X$ to $X\_F$. If $F$ is finite and separable over $k$, there is an additive functor $Cor\_F \to Cor\_k$ sending $U$ to $U$. These are adjoint: if $U$ is smooth over $F$ and $X$ is smooth over $k$, there is a canonical identification: $Cor\_F(U,X\_F) =Cor\_k(U,X)$.
+
+_proof:_
 
