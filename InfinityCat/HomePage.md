@@ -156,10 +156,93 @@ Show there is pushout diagram
 \coprod\_{J\_n}\partial \Delta\[n\] & \longrightarrow & \mathrm{sk}\_{n}(X)
 \end{array}
 Where $J\_n$ are the nondegenerate $n$-simplices. Moreover, $\mathrm{colim}\_n\mathrm{sk}\_n(X)\cong X$.
+
+_proof:_
+
+The diagram above is defined through the inclusion $\coprod\_{J\_n}\partial \Delta\[n\] \to \mathrm{sk}\_{n}(X)$ and canonical $\mathrm{sk}\_{n-1}(X)\to \mathrm{sk}\_{n}(X)$. It is obvious that this is a pushout diagram.
+
+There is a sequence $\mathrm{sk}\_n(X)\to \mathrm{sk}\_{n+1}(X)\to...\to X$, where $\mathrm{sk}\_n(X)\to \mathrm{sk}\_{n+1}(X)$ is injection. Suppose we have a $\mathrm{sk}\_n(X)\to \mathrm{sk}\_{n+1}(X)\to ... \xrightarrow{h} Y$. For every, $n$-simplice $x\in X\_n$, there is a large enough $m\geq n$ such that $x\in\mathrm{sk}\_m(X)\_n$. Hence, $h$ determines a simplicial map $f: X\to Y$. Suppose, there are two $f, g:X\to Y$, that factors $h$. Given $x\in X\_n$, $x\in \mathrm{sk}\_m(X)\_n$ for some $m$, and $f\|\_{\mathrm{sk}\_m(X)}=g\|\_{\mathrm{sk}\_m(X)}$, so $f(x)=g(x)$. Hence $f=g$.
  
- 
- 
+### Exercise 16
+Show that the following simplicial sets are not nerves of categories:
+
+We will use the fact that a simplicial set is a nerve if it has uniques inner horn fillers.
+#### i)
+$\partial \Delta\[n\]$ for $n\geq 2$.
+
+_proof:_
+
+Obviously, $Lambda^n_j\to \partial \Delta\[n\]$ does not have filler for any $j$, so not a nerve
+
+#### ii)
+$\Lambda^n\_i$ for $n= 2$, $j=1$ and $n>2$, $0\leq j\leq n$
+_proof:_
+
+For $n=2$, $\Lambda^2\_1=I^2$, we leave this for next one. For $n>3$, there is embedding $\partial \Delta\[n-1\]\to \Lambda^n\_j$ that does not factor through $\Delta\[n-1\]$.
 
 
+#### iii)
 
+$I^n$ for $n\geq 2$
+
+_proof:_
+
+$I^2=\Lambda^2\_1$ has no filler, and $I^2$ embeds into $I^n$ that does not factor through $\Delta\[2\]$.
+
+### Exercise 17
+
+ Suppose that $X$ is a Kan complex. Show that for all $n \geq 0$, the simplicial set $\mathrm{cosk}\_n(X)$ is again a Kan complex. Prove that the canonical map $X \to \mathrm{cosk}\_n(X)$ induces a bijection
+ \\[
+\pi\_k(X)\to \pi\_k(\mathrm{cosk}\_n(X))
+ \\]
+For $k< n$, and $\pi\_k(\mathrm{cosk}\_n(X))=0$ for $k\geq n$
+
+_proof:_
+
+The function 
+\\[
+\Hom(\Delta\[k\], \mathrm{cosk}\_n(X))\to \Hom(\Lambda^k\_i, \mathrm{cosk}\_n(X))
+\\]is isomorphic to 
+\\[
+\Hom(\mathrm{sk}\_n\Delta\[k\], X)\to \Hom(\mathrm{sk}\_n\Lambda^k\_i, X)
+\\]
+So we need to show that this is a surjection.
+
+For $k<n-1$, $\mathrm{sk}\_n\Lambda^k\_i\to \mathrm{sk}\_n\Delta\[k\]$ is isomorphism to the horn inclusion $\Lambda^k\_i \to \Delta\[k\]$.
+
+For $k>n-1$, $\mathrm{sk}\_n\Lambda^k\_i\to \mathrm{sk}\_n\Delta\[k\]$, is an isomorphism. 
+
+The only issue is with $k=n-1$, we have the inclusion is actually $\Lambda^k\_i\to \partial \Delta\[k\]$. The fact that $K$ is a Kan complex implies for any $\Lambda^k\_i$, we may determine the $\partial \Delta\[k\]$ filling through the barycentric subdivision. 
+
+Hence $\mathrm{cosk}\_n(X)$ is Kan.
+
+Let $S^k$ be $k$-dimensional simplicial sphere $\Delta\[k\]/\partial \Delta\[k\]$. We have that since $\mathrm{sk}\_n$ is a left adjoint, $\mathrm{sk}\_n S^k=(\mathrm{sk}\_n \Delta\[k\])/(\mathrm{sk}\_n\partial \Delta\[k\])$. If $k<n$, then $\mathrm{sk}\_n S^k\cong S^k$, and $\mathrm{sk}\_n (S^k\times I)\cong S^k\times I$ (this is because all nondegenerate simplices here are dimension at most $k+1\leq n$). Hence, the isomorphism of the homotopy group for $k<n$ is shown.
+
+For $k= n$, $\mathrm{sk}\_n S^k=S^n$ and $\mathrm{sk}\_n (S^k\times I)\cong S^n\cup I \cup S^n$, so $\pi\_n(\mathrm{cosk}\_n X)=0$.
+
+For $k>n$, $\mathrm{sk}\_n S^k=*$ and $\mathrm{sk}\_n (S^k\times I)\cong *$, so $\pi\_k(\mathrm{cosk}\_n X)=0$.
+
+### Exercise 18
+
+Show that a natural transformation between two functors $f, g : C \to D$ induces a homotopy between $N(f ), N(g) : N(C) \to N(D)$. Use this result to show that conjugation with an element determines a self map of $BG$ which is homotopic to the identity. What does conjugation induce on $\pi\_1 (BG)$? Why does this not show that every group is abelian?
+_proof:_
+
+A natural transformation $\alpha: f\implies g$ is equivalent to a functor $H: C\times I\to D$, such that $H\|\_{C\times 0}=f$ and $H\|\_{C\times 1}=g$. The nerve is then $N(H): N(C)\times I\to N(D)$, which is a homotopy between $N(f)$ to $N(g)$.
+
+
+For conjugation by $g\in G$, we have $c\_g$ takes $\*\xrightarrow{h} \*$ to $\*\xrightarrow{ghg^{-1}} \*$. There is an natural transformation, $\alpha: id\implies c\_g$, 
+\begin{array}{ccc}
+\*& \longrightarrow{g} & \*
+\end{array}
+\begin{array}{ccc}
+\downarrow{h} && \downarrow{ghg^{-1}{}
+\end{array}
+\begin{array}{ccc}
+\* & \longrightarrow{g} & \*
+\end{array}
+So we have $c\_g$ is homotopic to $id$.
+
+The action of conjugation induces conjugation on $\pi_1$. Why does this not imply every group is abelian? The homotopy we constructed is not a based homotopy.
+
+### Exercise 19
 
