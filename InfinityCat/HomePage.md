@@ -245,4 +245,124 @@ So we have $c\_g$ is homotopic to $id$.
 The action of conjugation induces conjugation on $\pi_1$. Why does this not imply every group is abelian? The homotopy we constructed is not a based homotopy.
 
 ### Exercise 19
+Show that the nerve of a category $C$ is 2-coskeletal, i.e., that the canonical map $N(C) \to \mathrm{cosk}\_2(N(C))$ is an isomorphism of simplicial sets.
+
+_proof:_
+
+The canonical map on $n$-simplices $N(C)\_n \to \mathrm{cosk}\_2(N(C))\_n$ is equivalent to the map 
+\\[
+\Hom(\Delta\[n\], N(C))\to \Hom(\Delta\[n\], \mathrm{cosk}\_2(N(C)))\cong \Hom(\mathrm{sk}\_2\Delta\[n\], N(C))
+\\]
+
+$\mathrm{sk}\_2\Delta\[n\]$ contains the $2$-faces, which determines composable edges. Since $\Hom(\Delta\[n\], N(C))$ is isomorphic to the length $n$-composable edges, which are uniquely determined by the sequences of $2$-composable edges, this is an isomorphism.
+
+### Exercise 22
+
+Let $G$ be a group and let $BG$ be the category with one object and $G$ as endomorphisms of that object. Show that $N(BG)$ has only one non-trivial homotopy group, namely $\pi\_1(N(BG))$, and that this group is canonically isomorphic to $G$.
+
+_proof:_
+
+First of all, by Exercise 19, we have $N(BG)\cong \mathrm{cosk}\_2N(BG)$. Then by Exercise 17, we have $\pi\_k(N(BG))=0$ for $k\geq 2$. $N(BG)$ is connected so $\pi\_0(N(BG))=0$.
+
+For $f\in\Hom(S^1, N(BG))$, $f(*)=*$ and $f(e)=g\in G$ for $e$ the unique nondegenerate $1$-simplice, and $f$ is uniquely determined by $g$. Suppose we have a based homotopy $H: \Delta\[1\]^2/\partial \Delta\[1\]\times \Delta\[1\]\to N(BG)$, the only three nondegenerate $1$-simplices, point in the same direction, living along adjacent $2$-faces. Hence they must be equal. In order word, $\pi\_1(N(BG))=\Hom(S^1, N(BG))=G$
+
+### Exercise 24
+
+Consider the map $\[0\] \to \[n\]$ with image {$0$}. Show that this determines a map $0: \[0\] \to\partial \Delta\[n\]$. Calculate the simplicial homotopy sets $\pi\_i(\partial \Delta\[n\])$ for $i \geq 1$ and $n\geq 2$. Deduce that $\partial \Delta\[n\]$ is not a Kan complex.
+
+_proof:_
+
+A map $S^n\to \pi\_i(\partial \Delta\[n\])$ based at $0$, has to factor through $\[0\]$ because the only $n$-simplices with $\partial \Delta\[n\]=0$ is the degenerate one. Therefore $\pi\_i(\partial \Delta\[n\])=0$. If $\partial \Delta\[n\])$ is Kan then this implies $\partial \Delta\[n\])$ is contractible, so $\partial \Delta\[n\])$ is not Kan.
+
+### Exercise 26
+ Determine the homotopy category of the following simplicial sets:
+
+We use Lemma 1.2.7 that says if $X\to Y$ induces isomorphism on $\mathrm{sk}\_2X\to \mathrm{sk}\_2Y$, then $hX\to hY$ is an isomorphism.
+#### i)
+$\partial \Delta\[n\]$
+_proof:_
+
+For $n>2$, $\mathrm{sk}\_2 \partial \Delta\[n\]=\mathrm{sk}\_2\Delta\[n\$. Therefore, $h\partial \Delta\[n\]\cong \[n\]$. 
+
+For $n=2$, $\mathrm{sk}\_2 \partial \Delta\[2\]=\partial \Delta\[2\]$. There are three objects, three arrows, two of which are composable, and no $2$-simplices. Therefore, $h\partial \Delta\[2\]$ is the category of three objects, $0$, $1$, and $2$, with arrow $0\to 1$, $0\to 2$, and $1\to 2$, with $0\to 1\to 2\neq 0\to 2$. 
+
+For $n=1$, $\partial \Delta\[1\]$ is the disjoint union of two point, so $h\partial \Delta\[1\] $ is the disjoint category of two object.
+
+#### ii)
+
+$\Lambda^n\_j$ for $n\geq 2$ and $0\leq j \leq n$
+
+_proof:_
+
+It is the category of $n+1$ objects, a $n$-composable sequence of arrows, and an arrow $0\to n$ that is different from $0\to 1\to ...\to \hat {j}\to ...\to n$.
+
+
+#### iii)
+
+$I^n$
+
+_proof:_
+
+$hI^n\cong \[n\]$.
+
+### Exercise 27
+
+Let $f : X \to Y$ be a map of simplicial sets. Prove or give a counter example to the following statements:
+
+#### i)
+
+If $f$ is a monomorphism, then $hX \to hY$ is fully faithful.
+
+ _counterexamples:_
+
+$\partial \Delta[1]\to \Delta\[1\]$ is mono, but $h\partial \Delta[1]=0\cup 1\to h\Delta\[1\]=\[1\]$ is not full.
+
+Let $X:=\partial \Delta\[2\]/\[1\to 2\]$ and let $Y:=\Delta\[2\]/\[1\to 2\]$, so we identify the edge $1\to 2$. There is a monomorphism $X\to Y$, but $hX$ is the two object category, with two distinct arrows, yet $hY$ has only one arrow, so it is not faithful.
+
+#### ii)
+
+If $f$ is a degree-wise surjection, then $hX \to hY$ is surjective and full, i.e., it induces a
+surjection on objects and on hom-sets.
+
+_proof:_
+
+see iii)
+
+#### iii)
+
+If $f$ induces a surjection on $0$- and $1$-simplices, then $hX \to hY$ is surjective and full.
+
+_proof:_
+
+Since $f$ is surjection. It obviously induces a surjection on the objects. Let $e: x\to y$ in $hY$, it corresponds to an arrow $e':x'\to y'$ in $hX$, because $e:x\to y$ corresponds to an edge $e:x\to y$ in $Y$.
+
+### Exercise 33
+
+Let $X$ be a simplicial set and consider the canonical map $X \to N(hX)$.
+
+#### i)
+
+Show that this map factors through the canonical map $X \to \mathrm{cosk}\_2(X)$.
+
+_proof:_
+
+We have that $X\to \mathrm{cosk}\_2(X)$ determines an isomorphism $hX\to h\mathrm{cosk}\_2(X)$. 
+
+#### ii)
+
+Show that the induced map $ \mathrm{cosk}\_2(X) \to N(hX)$ is an isomorphism if $X$ is isomorphic
+to the nerve of a category.
+
+_proof:_
+
+If $X=N(C)$, then $N(hX)=X$, and we have that nerve of categories are $2$-coskeletal.
+
+#### iii)
+Show that the map $\mathrm{cosk}\_2(X) \to N(hX)$ is in general not an isomorphism. Hint: Find an
+$X$ which is $2$-coskeletal, but not the nerve of a category.
+
+_proof:_
+
+
+
 
