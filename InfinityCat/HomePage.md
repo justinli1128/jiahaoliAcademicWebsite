@@ -363,6 +363,26 @@ $X$ which is $2$-coskeletal, but not the nerve of a category.
 
 _proof:_
 
+Let $X$ be the simplicial set of $2$ copies of $\Delta\[2\]$ glued together along the $0\to 1$ and $1\to 2$. This is obviously not the nerve of category.
 
+For $\Hom(\Delta\[n\], X)\to \Hom(\mathrm{sk}\_2(\Delta\[n\]), X)$, suppose we have $f:\mathrm{sk}\_2(\Delta\[n\])\to X$, $f$ factors through one copy of $\Delta\[2\]$. Therefore, there is a filler by $\Delta\[n\]$, hence $X$ is $2$-coskeletal.
+
+#### iv)
+
+Prove or disprove the following statement: The map $\mathrm{cosk}\_2(X) \to N(hX)$ is an isomorphism if and only if $X$ is isomorphic to the nerve of a category.
+
+_counterexample:_
+
+Let $X$ be the pushout of $\Delta\[3\]\xleftarrow{}\partial \Delta\[3\]\to \Delta\[3\]$. Its $2$-coskeleton is $\Delta\[3\]$, as $\mathrm{sk}\_2 \Delta\[n\]\to X$ lives within $\partial \Delta\[3\]$. We have then $\Delta\[3\]\to N(hX)$ is isomorphism, but $X$ is not a nerve.
+
+### Exercise 34
+
+Let $(V , \otimes, \mathbb{1})$ be a monoidal category. Then the functor $\Hom\_V (\mathbb{1}, −) : V \to Set$ is lax monoidal. Is it monoidal? If not: Can you find a condition on $(V , \otimes, \mathbb{1})$ which ensures that it is?
+
+_counterexample:_
+
+Let $V=Ab$ with the tensor product, $\mathbb{1}=\mathbb{Z}$. We have then $\Hom\_V (\mathbb{1}, −)\cong fgt$, the forgetful functor from abelian groups to sets. We have that $fgt(A\otimes B)\not\cong fgt(A)\times fgt(B)$.
+
+A strong condition on $V$ so the functor is monoidal, if $\otimes$ is the product. 
 
 
